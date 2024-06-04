@@ -1,12 +1,23 @@
 ---
-
+import { Image } from 'astro:assets';
 ---
 
-<nav>
-    <a href='/'>Home</a>
-    <a href='/about-us/'>About Us</a>
-    <a href='/georgia'>Georgia</a>
-    <a href='/north-carolina'>North Carolina</a>
-    <a href='/michigan'>Michigan</a>
-    <a href='/wisconsin'>Wisconsin</a>
+<nav class='flex place-content-center justify-between items-center'>
+    <div class='flex justify-self-start'>
+        <!-- <a href='/'><img alt="Blue Wave America logo" class="p-2 max-w-1 md:max-w-sm" src=
+            "/images/logo.png"></a> -->
+        <Image
+            src='/images/logo.png'
+            alt='Blue Wave America logo'
+            width='250'
+            height='75'/>
+    </div>
+    <div class='flex gap-2'>
+        <a href='/about-us/'>About Us</a>
+        <a href='/georgia'>Georgia</a>
+        <a href='/north-carolina'>North Carolina</a>
+        <a href='/michigan'>Michigan</a>
+        <a href='/wisconsin'>Wisconsin</a>
+    </div>
+    <div></div>
 </nav>
