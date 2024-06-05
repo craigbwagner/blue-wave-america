@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro"
+import { Image } from 'astro:assets';
 
 ---
 
@@ -10,10 +11,12 @@ import Navbar from "../components/Navbar.astro"
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Blue Wave America</title>
+    <style>
+
+    </style>
 	</head>
 	<body>
     <Navbar />
-    <h1>Blue Wave America</h1>
     <div class="relative overflow-hidden bg-gray-50">
       <div aria-hidden="true" class="block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
         <div class="relative h-full mx-auto max-w-7xl">
@@ -42,19 +45,7 @@ import Navbar from "../components/Navbar.astro"
           </rect></svg>
         </div>
       </div>
-      <div class="relative pt-6">
-        <div>
-          <div class="px-4 mx-auto max-w-7xl sm:px-6">
-            <nav aria-label="Global" class=
-            "relative flex items-center justify-between sm:h-10 md:justify-center">
-              <div class="mx-auto md:flex md:space-x-10">
-                <img alt="sky Wave America logo" class="max-w-xs mt-12 md:max-w-sm" src=
-                "/public/images/logo.png">
-              </div>
-            </nav>
-          </div>
-        </div>
-        <div class="px-4 mx-auto mt-16 max-w-7xl sm:mt-24">
+        <div class="px-4 mx-auto mt-16 max-w-7xl sm:mt-12">
           <div class="text-center">
             <h1 class=
             "text-4xl font-extrabold tracking-tight text-gray-800 sm:text-5xl md:text-6xl">
@@ -79,7 +70,7 @@ import Navbar from "../components/Navbar.astro"
             </p>
             <div class="max-w-md mx-auto mt-6 md:max-w-xl">
               <img alt="Joe Biden and Donald Trump" class="w-full rounded shadow" src=
-              "/public/images/biden-and-trump.png">
+              "/images/biden-and-trump.png">
             </div>
             <div class="max-w-md mx-auto mt-5 sm:flex sm:justify-center md:mt-8">
               <div class="rounded-md shadow">
@@ -154,8 +145,11 @@ import Navbar from "../components/Navbar.astro"
             "list">
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Adam Frisch " class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/adam-frisch.png">
+                  <Image alt='Adam Frisch' class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
+                  "/images/adam-frisch.png"
+                  width='200'
+                  height='100'
+                  ></Image>
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Adam Frisch (D)
@@ -169,7 +163,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Tammy Baldwin" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/tammy-baldwin.png">
+                  "/images/tammy-baldwin.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Tammy Baldwin (D)
@@ -183,7 +177,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Bob Casey" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/bob-casey.png">
+                  "/images/bob-casey.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Bob Casey Jr. (D)
@@ -197,7 +191,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Sherrod Brown" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/sherrod-brown.png">
+                  "/images/sherrod-brown.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Sherrod Brown (D)
@@ -211,7 +205,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Jon Tester" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/jon-tester.png">
+                  "/images/jon-tester.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Jon Tester (D)
@@ -225,7 +219,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Joe Biden" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/joe-biden.png">
+                  "/images/joe-biden.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       President Joe Biden
@@ -239,7 +233,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Ashley Ehasz" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/ashley-ehasz.png">
+                  "/images/ashley-ehasz.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Ashley Ehasz (D)
@@ -253,7 +247,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Colin Allred" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/colin-allred.jpg">
+                  "/images/colin-allred.jpg">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Colin Allred (D)
@@ -267,7 +261,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Shamaine Daniels" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/shamaine-daniels.png">
+                  "/images/shamaine-daniels.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Shamaine Daniels (D)
@@ -301,7 +295,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Raphael Warnock" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/raphael-warnock.jpg">
+                  "/images/raphael-warnock.jpg">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Raphael Warnock (D)
@@ -315,7 +309,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="John Fetterman" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/john-fetterman.jpg">
+                  "/images/john-fetterman.jpg">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       John Fetterman (D)
@@ -329,7 +323,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Mark Kelly" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/mark-kelly.png">
+                  "/images/mark-kelly.png">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Mark Kelly (D)
@@ -343,7 +337,7 @@ import Navbar from "../components/Navbar.astro"
               <li>
                 <div class="flex items-center space-x-4 lg:space-x-6">
                   <img alt="Josh Shapiro" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/public/images/josh-shapiro.jpg">
+                  "/images/josh-shapiro.jpg">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3>
                       Josh Shapiro (D)
@@ -390,7 +384,7 @@ import Navbar from "../components/Navbar.astro"
             <div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-12 sm:space-y-0 lg:gap-x-8">
               <div>
                 <div class="flex items-center space-x-4 lg:space-x-6 md:mt-12">
-                  <img alt="Mike Ward" class="h-auto rounded-md w-44" src="/public/images/mike-ward.jpg">
+                  <img alt="Mike Ward" class="h-auto rounded-md w-44" src="/images/mike-ward.jpg">
                   <div class="space-y-1 text-lg font-medium leading-6">
                     <h3 class="text-xl">
                       Mike Ward
@@ -421,7 +415,7 @@ import Navbar from "../components/Navbar.astro"
           "flex flex-col max-w-2xl gap-16 px-6 py-16 mx-auto bg-white/5 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
             <img alt="Rural Turnout Team" class=
             "flex-none object-cover w-full shadow-xl h-96 rounded-2xl lg:aspect-square lg:h-auto lg:max-w-sm"
-            src="/public/images/rural-turnout-fund.png">
+            src="/images/rural-turnout-fund.png">
             <div class="flex-auto w-full">
               <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
                 Join Our Rural Turnout Team
