@@ -2,18 +2,16 @@
 import { Image } from 'astro:assets';
 ---
 <!-- Modified from https://tailwindcomponents.com/components/tailwind-css-dropdown-navigation-bar -->
-<div class='max-w-2xl mx-auto'>
-  <nav class='border-gray-200'>
-      <div class='container mx-auto flex flex-wrap items-center justify-between'>
-          <!-- <a href='/'><img alt="Blue Wave America logo" class="p-2 max-w-1 md:max-w-sm" src=
-              "/images/logo.png"></a> -->
-          <a href='/' class='flex'>
-              <Image
-              src='/images/logo.png'
-              alt='Blue Wave America logo'
-              width='300'
-              height='100'/>
-          </a>
+<a href='/' class='flex justify-center mt-2'>
+  <Image
+  src='/images/logo.png'
+  alt='Blue Wave America logo'
+  width='600'
+  height='150'/>
+</a>
+<div class='mx-auto mt-3'>
+  <nav class='border-gray-700'>
+      <div class='container mx-auto flex flex-wrap justify-center'>
           <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
           <span class='sr-only'>Open main menus</span>
           <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
