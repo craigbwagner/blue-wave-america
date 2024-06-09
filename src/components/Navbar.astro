@@ -1,59 +1,97 @@
 ---
-import { Image } from 'astro:assets';
+const menuItems = [
+  { name: 'Georgia', href: '/states/georgia' },
+  { name: 'Michigan', href: '/states/michigan' },
+  { name: 'North Carolina', href: '/states/north-carolina' },
+  { name: 'Wisconsin', href: '/states/wisconsin' },
+];
 ---
-<!-- Modified from https://tailwindcomponents.com/components/tailwind-css-dropdown-navigation-bar -->
-<a href='/' class='flex justify-center mt-2'>
-  <Image
-  src='/images/logo.png'
-  alt='Blue Wave America logo'
-  width='600'
-  height='150'/>
-</a>
-<div class='mx-auto mt-3'>
-  <nav class='border-gray-700'>
-      <div class='container mx-auto flex flex-wrap justify-center'>
-          <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden ml-3 text-gray-400 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-lg inline-flex items-center justify-center" aria-controls="mobile-menu-2" aria-expanded="false">
-            <span class='sr-only'>Open main menus</span>
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-            </svg>
-          </button>
-          <div class="hidden md:block w-full md:w-auto" id="mobile-menu">
-            <ul class="flex-col md:flex-row flex md:space-x-8 mt-4 md:mt-0 md:text-sm md:font-medium">
-              <li>
-                <a href="/" class="bg-blue-700 md:bg-transparent text-white block pl-3 pr-4 py-2 md:text-blue-700 md:p-0 rounded focus:outline-none" aria-current="page">Home</a>
-              </li>
-              <li>
-                <a href="/about-us" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 block pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0">About Us</a>
-              </li>
-              <li>
-                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-gray-700 hover:bg-gray-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2 md:hover:text-blue-700 md:p-0 font-medium flex items-center justify-between w-full md:w-auto">
-                  Join Us
-                  <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                  </svg>
-                </button>
+<nav class="bg-gray-800">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-between h-16">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <!-- Icon when menu is closed. -->
+          <!--
+            Heroicon name: outline/menu
 
-                  <!-- Dropdown menu -->
-                <div id="dropdownNavbar" class="hidden bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow my-4 w-44">
-                  <ul class="py-1" aria-labelledby="dropdownLargeButton">
-                    <li>
-                      <a href="/georgia" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Georgia</a>
-                    </li>
-                    <li>
-                      <a href="/michigan" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Michigan</a>
-                    </li>
-                    <li>
-                      <a href="/north-carolina" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">North Carolina</a>
-                    </li>
-                    <li>
-                      <a href="/wisconsin" class="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2">Wisconsin</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-          </ul>
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <!-- Icon when menu is open. -->
+          <!--
+            Heroicon name: outline/x
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="hidden sm:block sm:ml-6">
+          <div class="flex space-x-4">
+            <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+            <a href="/about-us" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+            <a href="/events" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Events</a>
+            <div class="relative">
+              <button type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium inline-flex items-center" id="dropdown-button">
+                Join Us
+                <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden" id="dropdown-menu">
+                {menuItems.map(item => (
+                  <a href={item.href} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{item.name}</a>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-  </nav>
-</div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
+      <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+      <a href="/events" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Events</a>
+      <div class="relative">
+        <button type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium" id="mobile-dropdown-button">
+          Join Us
+          <svg class="ml-2 h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+        </button>
+        <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden" id="mobile-dropdown-menu">
+          {menuItems.map(item => (
+            <a href={item.href} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{item.name}</a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const dropdownButton = document.getElementById('dropdown-button');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  dropdownButton.addEventListener('click', () => {
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+  const mobileDropdownButton = document.getElementById('mobile-dropdown-button');
+  const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
+  mobileDropdownButton.addEventListener('click', () => {
+    mobileDropdownMenu.classList.toggle('hidden');
+  });
+</script>
+
