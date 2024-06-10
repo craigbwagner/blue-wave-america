@@ -1,5 +1,5 @@
 ---
-import Navbar from "../components/Navbar.astro"
+import Header from "../components/Header.astro"
 import { Image } from 'astro:assets';
 
 ---
@@ -10,10 +10,9 @@ import { Image } from 'astro:assets';
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Blue Wave America</title>
-    <link rel="icon" type="image/x-icon" href="/public/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 	</head>
 	<body>
-    <Navbar />
     <div class="relative overflow-hidden bg-gray-50">
       <div aria-hidden="true" class="block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
         <div class="relative h-full mx-auto max-w-7xl">
@@ -42,6 +41,7 @@ import { Image } from 'astro:assets';
           </rect></svg>
         </div>
       </div>
+      <Header />
         <div class="px-4 mx-auto mt-16 max-w-7xl sm:mt-12">
           <div class="text-center">
             <h1 class=
@@ -475,7 +475,7 @@ import { Image } from 'astro:assets';
     </div>
     <footer class="w-full bg-gray-900">
       <p class="max-w-3xl px-16 py-8 pt-16 mx-auto text-center text-gray-400 uppercase">
-        Contact: <a href="mailto:oscar@bluewaveamerica.com">info@bluewaveamerica.com</a>
+        Contact: <a href="mailto:info@bluewaveamerica.com">info@bluewaveamerica.com</a>
       </p>
       <p class=
       "max-w-3xl px-8 py-8 mx-auto mt-16 text-center text-gray-400 uppercase border border-gray-700">
