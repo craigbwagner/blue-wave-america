@@ -1,16 +1,48 @@
 ---
-
+import { Image } from 'astro:assets';
+import facebookIcon from '../../public/social-media-icons/facebook-icon.svg'
+import xIcon from '../../public/social-media-icons/x-logo.png'
+import instagramIcon from '../../public/social-media-icons/instagram-icon.svg'
 ---
-<footer class="w-full bg-gray-900">
-  <p class="max-w-3xl px-16 py-8 pt-6 mx-auto text-center text-gray-400 uppercase">
+<footer class="w-full bg-gray-900 flex flex-col items-center">
+  <p class='max-w-3xl py-4 mx-auto text-center text-gray-400 uppercase'>
+    Follow Us
+  </p>
+  <div class='flex w-60 h-12 justify-between gap-5 items-center'>
+    <a href='https://www.facebook.com/BlueWaveAmerica' target='_blank'>
+      <Image
+        src={facebookIcon}
+        alt='Facebook icon'
+        height='36'
+        width='36'
+      />
+    </a>
+    <a href='https://www.instagram.com/bluewaveamerica/' target='_blank'>
+      <Image
+        src={instagramIcon}
+        alt='Instagram icon'
+        height='35'
+        width='35'
+      />
+    </a>
+    <a href='https://x.com/BluWaveAmerica' target='_blank'>
+      <Image
+        src={xIcon}
+        alt='X icon'
+        height='42'
+        width='42'
+      />
+    </a>
+  </div>
+  <p class="max-w-3xl py-6 mx-auto text-center text-gray-400 uppercase">
     Contact: <a href="mailto:info@bluewaveamerica.com">info@bluewaveamerica.com</a>
   </p>
   <p class=
-  "max-w-3xl px-8 py-8 mx-auto mt-6 text-center text-gray-400 uppercase border border-gray-700">
+  "max-w-3xl py-4 mx-auto text-center text-gray-400 uppercase border border-gray-700">
     Paid for by Blue Wave America (bluewaveamerica.com) and not authorized by any candidate or
     candidate's committee
   </p>
-  <p class="px-16 pt-8 pb-10 text-center text-gray-400">
+  <p class="px-16 py-6 pb-6 text-center text-gray-400">
     P.O. Box 4519<br>
     Frankfort, KY 40604
   </p>
