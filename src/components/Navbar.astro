@@ -18,6 +18,13 @@ const menuItems = [
   mobileDropdownButton.addEventListener('click', () => {
     mobileDropdownMenu.classList.toggle('hidden');
   });
+
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenuLinks = document.getElementById('mobile-menu-links');
+  mobileMenuButton.addEventListener('click', () => {
+    mobileMenuLinks.classList.toggle('hidden');
+  })
+
 </script>
 
 <nav>
@@ -25,7 +32,7 @@ const menuItems = [
     <div class="relative flex items-center justify-center h-16">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
         <!-- Mobile menu button-->
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" id='mobile-menu-button' aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Icon when menu is closed. -->
           <!--
@@ -50,7 +57,7 @@ const menuItems = [
       <div class="flex-1 flex items-center justify-evenly w-4/6 sm:items-stretch sm:justify-center">
         <div class="hidden sm:block sm:ml-6">
           <div class="flex justify-evenly w-full space-x-4">
-            <a class="text-gray-200 bg-sky-600 hover:bg-sky-600 px-3 py-2 rounded-md text-med font-medium" href="#" target=
+            <a class="text-gray-200 bg-sky-600 hover:bg-gray-800 px-3 py-2 rounded-md text-med font-medium" href="#" target=
             "_blank">Volunteer</a>
             <a href="/" class="text-gray-500 hover:text-sky-500 px-3 py-2 rounded-md text-med font-medium">Home</a>
             <a href="/about-us" class="text-gray-500 hover:text-sky-500 px-3 py-2 rounded-md text-med font-medium">About Us</a>
@@ -78,9 +85,9 @@ const menuItems = [
 
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="sm:hidden" id="mobile-menu">
-    <div class="px-2 pt-2 pb-3 space-y-1">
+    <div class="px-2 pt-2 pb-3 space-y-1 hidden" id='mobile-menu-links'>
       <a href="/" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Home</a>
-      <a href="/about" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+      <a href="/about-us" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">About Us</a>
       <a href="/events" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Events</a>
       <div class="relative">
         <button type="button" class="text-gray-300 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-2 rounded-md text-base font-medium" id="mobile-dropdown-button">
@@ -89,13 +96,14 @@ const menuItems = [
             <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
           </svg>
         </button>
-        <div class="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden" id="mobile-dropdown-menu">
+        <div class="origin-top-right right-0 mt-2 w-40 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden" id="mobile-dropdown-menu">
           {menuItems.map(item => (
             <a href={item.href} class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">{item.name}</a>
           ))}
         </div>
       </div>
-      <button>Donate</button>
+      <a href='https://secure.actblue.com/donate/blue-wave-america-frontpage'>Donate</a>
+      <a href='https://secure.actblue.com/donate/blue-wave-america-frontpage'>Volunteer</a>
     </div>
   </div>
 </nav>
