@@ -109,8 +109,8 @@ const ourWorkPoliticians = [
         </div>
       </div> -->
     <Header />
-    <div class="mx-auto mt-3 max-w-4xl pl-5">
-      <h1 class="text-6xl mb-6 font-extrabold tracking-tight text-gray-800 m:text-3xl m:justify">
+    <div class="mx-auto mt-3 max-w-4xl px-5">
+      <h1 class="text-6xl mb-6 font-extrabold tracking-tight text-gray-800 m:text-3xl">
         <span class="block xl:inline">Empowering</span> <span class=
         "block text-sky-600 xl:inline">Rural Democrats</span>
       </h1>
@@ -135,7 +135,7 @@ const ourWorkPoliticians = [
         />
       </div>
     </div>
-    <div class="mx-auto max-w-4xl py-4 pl-5">
+    <div class="mx-auto max-w-4xl py-4 px-5">
       <h2 class="text-4xl font-extrabold text-gray-800">
         Let's be clear:
       </h2>
@@ -181,7 +181,7 @@ const ourWorkPoliticians = [
     </div>
 
 
-    <div class="grid gap-8 grid-cols-3 py-8 pl-5 mx-auto max-w-5xl">
+    <div class="grid gap-8 grid-cols-3 py-8 px-5 mx-auto max-w-5xl">
       <div class="space-y-6">
         <h2 class="text-3xl font-extrabold tracking-tight text-gray-800">
           We're fighting to elect
@@ -191,15 +191,13 @@ const ourWorkPoliticians = [
           agenda for the people.
         </p>
       </div>
-      <div class="col-span-2 mt-8 pr-3">
+      <div class="col-span-2 mt-8 px-3">
         <ul class="grid grid-cols-1 gap-12 md:grid-cols-2" role="list">
           {fightingForPoliticians.map(politician => <Profile politician={politician} />)}
         </ul>
       </div>
     </div>
-
-
-    <div class="grid gap-8 grid-cols-3 py-8 pl-5 mx-auto max-w-5xl">
+    <div class="grid gap-8 grid-cols-3 py-8 px-5 mx-auto max-w-5xl">
       <div class="space-y-6">
         <h2 class="text-3xl font-extrabold tracking-tight text-gray-800">
           Our Work
@@ -209,7 +207,7 @@ const ourWorkPoliticians = [
           we'll keep fighting for Democracy <strong>Every Day</strong>.
         </p>
       </div>
-      <div class="col-span-2 mt-8 pr-3">
+      <div class="col-span-2 mt-8">
         <ul class="grid grid-cols-1 gap-12 md:grid-cols-2" role="list">
           {ourWorkPoliticians.map(politician => <Profile politician={politician} />)}
         </ul>
