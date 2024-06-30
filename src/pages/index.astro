@@ -1,8 +1,74 @@
 ---
 import Header from "../components/Header.astro"
 import Footer from '../components/Footer.astro'
+import Profile from '../components/Profile.astro'
 import { Image } from 'astro:assets';
 
+const fightingForPoliticians = [
+  {
+    name: 'Tammy Baldwin (D)',
+    position: 'Wisconsin Senate',
+    img: '/images/tammy-baldwin.png'
+  },
+  {
+    name: 'Bob Casey Jr. (D)',
+    position: 'Pennsylvania Senate',
+    img: '/images/bob-casey.png'
+  },
+  {
+    name: 'Sherrod Brown (D)',
+    position: 'Ohio Senate',
+    img: '/images/sherrod-brown.png'
+  },
+  {
+    name: 'Jon Tester (D)',
+    position: 'Montana Senate',
+    img: '/images/jon-tester.png'
+  },
+  {
+    name: 'President Joe Biden',
+    position: '& Vice President Kamala Harris',
+    img: '/images/joe-biden.png'
+  },
+  {
+    name: 'Ashley Ehasz (D)',
+    position: 'Pennsylvania Congress (red to blue)',
+    img: '/images/ashley-ehasz.png'
+  },
+  {
+    name: 'Colin Allred (D)',
+    position: 'Democrat to defeat Ted Cruz',
+    img: '/images/colin-allred.jpg'
+  },
+  {
+    name: 'Shamaine Daniels (D)',
+    position: 'Pennsylvania Congress (red to blue)',
+    img: '/images/shamaine-daniels.png'
+  },
+]
+
+const ourWorkPoliticians = [
+{
+    name: 'Raphael Warnock (D)',
+    position: 'Georgia Senate',
+    img: '/images/raphael-warnock.jpg'
+  },
+  {
+    name: 'John Fetterman (D)',
+    position: 'Pennsylvania Senate (red to blue)',
+    img: '/images/john-fetterman.jpg'
+  },
+  {
+    name: 'Mark Kelly (D)',
+    position: 'Arizona Senate',
+    img: '/images/mark-kelly.png'
+  },
+  {
+    name: 'Josh Shapiro (D)',
+    position: 'Pennsylvania Governor',
+    img: '/images/josh-shapiro.jpg'
+  },
+]
 ---
 
 <html lang="en">
@@ -130,118 +196,7 @@ import { Image } from 'astro:assets';
           <div class="lg:col-span-2">
             <ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8" role=
             "list">
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Tammy Baldwin" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/tammy-baldwin.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Tammy Baldwin (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Wisconsin Senate
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Bob Casey" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/bob-casey.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Bob Casey Jr. (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Pennsylvania Senate
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Sherrod Brown" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/sherrod-brown.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Sherrod Brown (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Ohio Senate
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Jon Tester" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/jon-tester.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Jon Tester (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Montana Senate
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Joe Biden" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/joe-biden.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      President Joe Biden
-                    </h3>
-                    <p class="text-sky-600">
-                      & Vice President Kamala Harris
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Ashley Ehasz" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/ashley-ehasz.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Ashley Ehasz (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Pennsylvania Congress (red to blue)
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Colin Allred" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/colin-allred.jpg">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Colin Allred (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Democrat to defeat Ted Cruz
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Shamaine Daniels" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/shamaine-daniels.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Shamaine Daniels (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Pennsylvania Congress (red to blue)
-                    </p>
-                  </div>
-                </div>
-              </li>
+              {fightingForPoliticians.map(politician => <Profile politician={politician} />)}
             </ul>
           </div>
         </div>
@@ -262,62 +217,7 @@ import { Image } from 'astro:assets';
           <div class="lg:col-span-2">
             <ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8" role=
             "list">
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Raphael Warnock" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/raphael-warnock.jpg">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Raphael Warnock (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Georgia Senate
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="John Fetterman" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/john-fetterman.jpg">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      John Fetterman (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Pennsylvania Senate (red to blue)
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Mark Kelly" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/mark-kelly.png">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Mark Kelly (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Arizona Senate
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="flex items-center space-x-4 lg:space-x-6">
-                  <img alt="Josh Shapiro" class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src=
-                  "/images/josh-shapiro.jpg">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3>
-                      Josh Shapiro (D)
-                    </h3>
-                    <p class="text-sky-600">
-                      Pennsylvania Governor
-                    </p>
-                  </div>
-                </div>
-              </li>
+            {ourWorkPoliticians.map(politician => <Profile politician={politician} />)}
             </ul>
           </div>
         </div>
