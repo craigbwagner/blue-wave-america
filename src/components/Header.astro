@@ -2,11 +2,13 @@
 import { Image } from 'astro:assets';
 import Navbar from '../components/Navbar.astro'
 ---
-<a href='/' class='flex justify-center mt-2'>
+<a href='/' class='flex justify-center mt-3'>
   <Image
-  src='/images/logo.png'
-  alt='Blue Wave America logo'
-  width='900'
-  height='150'/>
+    src='/images/logo.png'
+    alt='Blue Wave America logo'
+    width='900'
+    height='150'
+    class='px-5'
+  />
 </a>
 <Navbar />
