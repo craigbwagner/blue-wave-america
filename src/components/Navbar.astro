@@ -28,11 +28,11 @@ const menuItems = [
 </script>
 
 <nav>
-  <div class="max-w-full mx-auto px-2 my-8 sm:px-6 lg:px-8">
-    <div class="relative flex items-center justify-center h-16">
-      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
-        <!-- Mobile menu button-->
-        <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" id='mobile-menu-button' aria-expanded="false">
+  <div class="max-w-full mx-auto px-2 my-6 sm:px-6 lg:px-8">
+    <div class="relative flex items-center justify-center">
+      <!-- Mobile menu button-->
+      <div class="absolute left-0 flex items-center sm:hidden">
+        <button type="button" class="inline-flex items-center justify-center p-2 my-4 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" id='mobile-menu-button' aria-expanded="false">
           <span class="sr-only">Open main menu</span>
           <!-- Icon when menu is closed. -->
           <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -46,7 +46,7 @@ const menuItems = [
       </div>
 
       <!-- Desktop Navbar -->
-      <div class="flex-1 flex items-center justify-evenly w-4/6 sm:items-stretch sm:justify-center">
+      <div class="flex-1 flex items-center justify-evenly sm:items-stretch sm:justify-center">
         <div class="hidden sm:block sm:ml-6">
           <div class="flex justify-evenly w-full space-x-4 sm:space-x-2">
             <a class="text-gray-200 bg-sky-600 hover:bg-gray-800 px-2 py-2 rounded-md text-med font-medium" href="https://mobilize.us/s/zGjLUP" target=
@@ -76,7 +76,7 @@ const menuItems = [
 
   <!-- Mobile menu, show/hide based on menu state. -->
   <div class="sm:hidden" id="mobile-menu">
-    <div class="px-2 pt-1 pb-1 hidden" id='mobile-menu-links'>
+    <div class="px-2 py-1 hidden" id='mobile-menu-links'>
       <a href="/" class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium">Home</a>
       <a href="/about-us" class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium">About Us</a>
       <div class="relative">
