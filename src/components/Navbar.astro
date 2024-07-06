@@ -1,102 +1,177 @@
 ---
 const menuItems = [
-  { name: 'Michigan', href: '/states/michigan' },
-  { name: 'North Carolina', href: '/states/north-carolina' },
-  { name: 'Pennsylvania', href: '/states/pennsylvania' },
-  { name: 'Wisconsin', href: '/states/wisconsin' },
+	{ name: "Michigan", href: "/states/michigan" },
+	{ name: "North Carolina", href: "/states/north-carolina" },
+	{ name: "Pennsylvania", href: "/states/pennsylvania" },
+	{ name: "Wisconsin", href: "/states/wisconsin" },
 ];
 ---
+
 <script>
-  const dropdownButton = document.getElementById('dropdown-button');
-  const dropdownMenu = document.getElementById('dropdown-menu');
-  dropdownButton.addEventListener('click', () => {
-    dropdownMenu.classList.toggle('hidden');
-  });
+	const dropdownButton = document.getElementById("dropdown-button");
+	const dropdownMenu = document.getElementById("dropdown-menu");
+	dropdownButton.addEventListener("click", () => {
+		dropdownMenu.classList.toggle("hidden");
+	});
 
-  const mobileDropdownButton = document.getElementById('mobile-dropdown-button');
-  const mobileDropdownMenu = document.getElementById('mobile-dropdown-menu');
-  mobileDropdownButton.addEventListener('click', () => {
-    mobileDropdownMenu.classList.toggle('hidden');
-  });
+	const mobileDropdownButton = document.getElementById("mobile-dropdown-button");
+	const mobileDropdownMenu = document.getElementById("mobile-dropdown-menu");
+	mobileDropdownButton.addEventListener("click", () => {
+		mobileDropdownMenu.classList.toggle("hidden");
+	});
 
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenuLinks = document.getElementById('mobile-menu-links');
-  mobileMenuButton.addEventListener('click', () => {
-    mobileMenuLinks.classList.toggle('hidden');
-  })
-
+	const mobileMenuButton = document.getElementById("mobile-menu-button");
+	const mobileMenuLinks = document.getElementById("mobile-menu-links");
+	mobileMenuButton.addEventListener("click", () => {
+		mobileMenuLinks.classList.toggle("hidden");
+	});
 </script>
 
 <nav>
-  <div class="max-w-full mx-auto px-2 py-2 my-6 sm:bg-gray-800 sm:px-6 md:py-3 lg:px-8">
-    <div class="relative flex items-center justify-center">
-      <!-- Mobile menu button-->
-      <div class="absolute left-0 flex items-center sm:hidden">
-        <button type="button" class="inline-flex items-center justify-center p-2 my-4 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" id='mobile-menu-button' aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <!-- Icon when menu is closed. -->
-          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-          <!-- Icon when menu is open. -->
-          <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
+	<div class="max-w-full mx-auto px-2 py-2 my-6 sm:bg-gray-800 sm:px-6 md:py-3 lg:px-8">
+		<div class="relative flex items-center justify-center">
+			<!-- Mobile menu button-->
+			<div class="absolute left-0 flex items-center sm:hidden">
+				<button
+					type="button"
+					class="inline-flex items-center justify-center p-2 my-4 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+					aria-controls="mobile-menu"
+					id="mobile-menu-button"
+					aria-expanded="false"
+				>
+					<span class="sr-only">Open main menu</span>
+					<!-- Icon when menu is closed. -->
+					<svg
+						class="block h-6 w-6"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+					</svg>
+					<!-- Icon when menu is open. -->
+					<svg
+						class="hidden h-6 w-6"
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+						aria-hidden="true"
+					>
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+					</svg>
+				</button>
+			</div>
 
-      <!-- Desktop Navbar -->
-      <div class="flex">
-        <div class="hidden sm:ml-6 sm:block md:ml-0">
-          <div class="flex justify-evenly items-center md:w-screen max-w-screen-xl">
-            <a class="text-gray-200 text-lg bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl" href="https://mobilize.us/s/zGjLUP" target=
-            "_blank">Volunteer</a>
-            <a href="/" class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md text-med lg:text-xl">Home</a>
-            <a href="/about-us" class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl">About Us</a>
-            <div class="relative">
-              <button type="button" class="text-gray-200 text-lg font-medium inline-flex items-center transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl" id="dropdown-button">
-                Join Us
-                <svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                </svg>
-              </button>
-              <div class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden" id="dropdown-menu">
-                {menuItems.map(item => (
-                  <a href={item.href} class="block px-4 py-2 text-lg text-gray-500 hover:text-sky-500">{item.name}</a>
-                ))}
-              </div>
-            </div>
-            <a class="text-gray-200 text-lg font-medium bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl" href="https://secure.actblue.com/donate/blue-wave-america-frontpage" target=
-            "_blank">Donate Now</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+			<!-- Desktop Navbar -->
+			<div class="flex">
+				<div class="hidden sm:ml-6 sm:block md:ml-0">
+					<div class="flex justify-evenly items-center md:w-screen max-w-screen-xl">
+						<a
+							class="text-gray-200 text-lg bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl"
+							href="https://mobilize.us/s/zGjLUP"
+							target="_blank">Volunteer</a
+						>
+						<a
+							href="/"
+							class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md text-med lg:text-xl"
+							>Home</a
+						>
+						<a
+							href="/about-us"
+							class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
+							>About Us</a
+						>
+						<div class="relative">
+							<button
+								type="button"
+								class="text-gray-200 text-lg font-medium inline-flex items-center transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
+								id="dropdown-button"
+							>
+								Join Us
+								<svg class="ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+									<path
+										fill-rule="evenodd"
+										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+										clip-rule="evenodd"></path>
+								</svg>
+							</button>
+							<div
+								class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden"
+								id="dropdown-menu"
+							>
+								{
+									menuItems.map((item) => (
+										<a href={item.href} class="block px-4 py-2 text-lg text-gray-500 hover:text-sky-500">
+											{item.name}
+										</a>
+									))
+								}
+							</div>
+						</div>
+						<a
+							class="text-gray-200 text-lg font-medium bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl"
+							href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
+							target="_blank">Donate Now</a
+						>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <!-- Mobile menu, show/hide based on menu state. -->
-  <div class="sm:hidden" id="mobile-menu">
-    <div class="px-2 py-1 hidden" id='mobile-menu-links'>
-      <a href="/" class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium">Home</a>
-      <a href="/about-us" class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium">About Us</a>
-      <div class="relative">
-        <button type="button" class="text-gray-700 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-1.5 rounded-md text-base font-medium" id="mobile-dropdown-button">
-          Join Us
-          <svg class="ml-2 h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </button>
-        <div class="origin-top-right right-0 mt-2 w-40 rounded-md shadow-lg py-1.5 bg-gray-50 ring-1 ring-black ring-opacity-5 hidden" id="mobile-dropdown-menu">
-          {menuItems.map(item => (
-            <a href={item.href} class="block px-4 py-1.5 text-med text-gray-700 hover:bg-gray-100">{item.name}</a>
-          ))}
-        </div>
-        <a href='https://secure.actblue.com/donate/blue-wave-america-frontpage' class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium" target='_blank'>Donate Now</a>
-        <a href='https://mobilize.us/s/zGjLUP' class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium" target='_blank'>Volunteer</a>
-      </div>
-    </div>
-  </div>
+	<!-- Mobile menu, show/hide based on menu state. -->
+	<div class="sm:hidden" id="mobile-menu">
+		<div class="px-2 py-1 hidden" id="mobile-menu-links">
+			<a
+				href="/"
+				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+				>Home</a
+			>
+			<a
+				href="/about-us"
+				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+				>About Us</a
+			>
+			<div class="relative">
+				<button
+					type="button"
+					class="text-gray-700 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-1.5 rounded-md text-base font-medium"
+					id="mobile-dropdown-button"
+				>
+					Join Us
+					<svg class="ml-2 h-5 w-5 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+						<path
+							fill-rule="evenodd"
+							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+							clip-rule="evenodd"></path>
+					</svg>
+				</button>
+				<div
+					class="origin-top-right right-0 mt-2 w-40 rounded-md shadow-lg py-1.5 bg-gray-50 ring-1 ring-black ring-opacity-5 hidden"
+					id="mobile-dropdown-menu"
+				>
+					{
+						menuItems.map((item) => (
+							<a href={item.href} class="block px-4 py-1.5 text-med text-gray-700 hover:bg-gray-100">
+								{item.name}
+							</a>
+						))
+					}
+				</div>
+				<a
+					href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
+					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+					target="_blank">Donate Now</a
+				>
+				<a
+					href="https://mobilize.us/s/zGjLUP"
+					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+					target="_blank">Volunteer</a
+				>
+			</div>
+		</div>
+	</div>
 </nav>
-
-
-
