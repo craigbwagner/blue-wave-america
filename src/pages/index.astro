@@ -176,89 +176,85 @@ const states = ["Michigan", "Wisconsin", "Pennsylvania", "North Carolina"];
 		</div>
 
 
-    <div class="bg-gray-50">
-      <div class="px-4 py-12 mx-auto max-w-6xl sm:px-6 lg:px-8 lg:py-10">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-12">
-          <div class="space-y-5 sm:space-y-4">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-800 ">
-              About Us
-            </h2>
-            <p class="text-lg text-gray-500">
-              We are a team of rural Democrats across the country working to turn out our
-              neighbors, friends, and family to vote Blue. Founded by Mike Ward, a former
-              Congressman from Kentucky, Associate Director of the Peace Corps, and veteran
-              Democratic strategist, Blue Wave America has been focused since day one on expanding
-              this long-forgotten Democratic constituency.
-            </p>
-          </div>
-          <div class="lg:col-span-2">
-            <div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-10 sm:space-y-0 lg:gap-x-8">
-                <div class="flex items-center space-x-4 mt-7 lg:space-x-6 ">
-                  <Image
-                    alt='Mike Ward'
-                    src='/images/mike-ward.jpg'
-                    height="200"
-                    width="200"
-                    class="rounded-md"
-                  />
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3 class="text-2xl font-bold">
-                      Mike Ward
-                    </h3>
-                    <p class="text-sky-600">
-                      Former Congressman Mike Ward, founder of Blue Wave America
-                    </p>
-                    <p class="max-w-xl mt-10 text-lg text-gray-500">
-                      “When I represented Louisville, KY in Congress, I saw firsthand how
-                      Republicans under Newt Gingrich began working to dismantle democracy and how
-                      they have made the lives of rural Americans so much harder. That’s why I
-                      started Blue Wave America&mdash;I know there are still Democrats we can turn
-                      out in deep red counties. We did it in 2022 and we are doing it full-steam
-                      for 2024.”
-                    </p>
-                  </div>
+    <div class="px-4 py-12 mx-auto max-w-6xl sm:px-6 lg:px-8 lg:py-10">
+      <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-12">
+        <div class="space-y-5 sm:space-y-4">
+          <h2 class="text-3xl font-extrabold tracking-tight text-gray-800 ">
+            About Us
+          </h2>
+          <p class="text-lg text-gray-500">
+            We are a team of rural Democrats across the country working to turn out our
+            neighbors, friends, and family to vote Blue. Founded by Mike Ward, a former
+            Congressman from Kentucky, Associate Director of the Peace Corps, and veteran
+            Democratic strategist, Blue Wave America has been focused since day one on expanding
+            this long-forgotten Democratic constituency.
+          </p>
+        </div>
+        <div class="lg:col-span-2">
+          <div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-10 sm:space-y-0 lg:gap-x-8">
+              <div class="flex items-center space-x-4 mt-7 lg:space-x-6 ">
+                <Image
+                  alt='Mike Ward'
+                  src='/images/mike-ward.jpg'
+                  height="200"
+                  width="200"
+                  class="rounded-md"
+                />
+                <div class="space-y-1 text-lg font-medium leading-6">
+                  <h3 class="text-2xl font-bold">
+                    Mike Ward
+                  </h3>
+                  <p class="text-sky-600">
+                    Former Congressman Mike Ward, founder of Blue Wave America
+                  </p>
+                  <p class="max-w-xl mt-10 text-lg text-gray-500">
+                    “When I represented Louisville, KY in Congress, I saw firsthand how
+                    Republicans under Newt Gingrich began working to dismantle democracy and how
+                    they have made the lives of rural Americans so much harder. That’s why I
+                    started Blue Wave America&mdash;I know there are still Democrats we can turn
+                    out in deep red counties. We did it in 2022 and we are doing it full-steam
+                    for 2024.”
+                  </p>
                 </div>
-            </div>
+              </div>
           </div>
         </div>
       </div>
     </div>
-		<div class="bg-gray-900">
-			<div class="relative isolate mx-auto max-w-7xl">
-				<div
-					class="flex flex-col max-w-2xl gap-16 px-6 py-10 mx-auto bg-white/5 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-12 xl:gap-x-20 xl:px-20"
-				>
-					<Image
-						alt="Rural Democrats Turnout Fund logo"
-						src="/images/rural-turnout-fund.png"
-						height="300"
-						width="300"
-						class="flex-none object-cover w-full shadow-xl h-96 rounded-2xl aspect-square max-w-sm"
-					/>
-					<div class="flex-auto w-full">
-						<h2 class="text-4xl font-bold tracking-tight text-white sm:text-4xl">Join Our Rural Turnout Team</h2>
-						<p class="mt-6 text-lg leading-8 text-gray-300">
-							We are recruiting organizers and volunteers across the country to turn out rural Democrats in key swing
-							states by learning and implementing tried-and-true voter turnout methods, innovative digital strategies,
-							and creative relational organizing approaches.
-						</p>
-						<ul class="grid grid-cols-1 text-lg leading-7 text-white gap-x-6 gap-y-3 sm:grid-cols-2" role="list">
-							{states.map((state) => <StateButton state={state} />)}
-						</ul>
-					</div>
-				</div>
-				<div
-					aria-hidden="true"
-					class="absolute inset-x-0 flex justify-center overflow-hidden -top-16 -z-10 transform-gpu blur-3xl"
-				>
-					<div
-						class="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
-						style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
-					>
-					</div>
+		<div class="relative isolate mx-auto max-w-7xl bg-gray-900">
+			<div
+				class="flex flex-col max-w-2xl gap-16 px-6 py-10 mx-auto bg-white/5 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-12 xl:gap-x-20 xl:px-20"
+			>
+				<Image
+					alt="Rural Democrats Turnout Fund logo"
+					src="/images/rural-turnout-fund.png"
+					height="300"
+					width="300"
+					class="flex-none object-cover w-full shadow-xl h-96 rounded-2xl aspect-square max-w-sm"
+				/>
+				<div class="flex-auto w-full">
+					<h2 class="text-4xl font-bold tracking-tight text-white sm:text-4xl">Join Our Rural Turnout Team</h2>
+					<p class="mt-6 text-lg leading-8 text-gray-300">
+						We are recruiting organizers and volunteers across the country to turn out rural Democrats in key swing
+						states by learning and implementing tried-and-true voter turnout methods, innovative digital strategies,
+						and creative relational organizing approaches.
+					</p>
+					<ul class="grid grid-cols-1 text-lg leading-7 text-white gap-x-6 gap-y-3 sm:grid-cols-2" role="list">
+						{states.map((state) => <StateButton state={state} />)}
+					</ul>
 				</div>
 			</div>
-		</div>
+			<div
+				aria-hidden="true"
+				class="absolute inset-x-0 flex justify-center overflow-hidden -top-1 -bottom-1 -z-10 transform-gpu blur-3xl"
+			>
+				<div
+					class="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25"
+					style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"
+				>
+				</div>
+			</div>
+    </div>
 		<Footer />
 	</body>
 </html>
