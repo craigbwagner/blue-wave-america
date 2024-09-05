@@ -8,13 +8,15 @@
 			<h2 class="font-bold tracking-tight text-white sm:text-4xl">Sign up for our newsletter</h2>
 			<p class="my-3 text-lg leading-8 text-gray-300">Description of what user will be signing up for.</p>
 			<form action="#" name="newsletter-signup" data-netlify="true">
-				<div class="flex flex-col items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
-					<div class="grid grid-cols-2 relative w-full" id="form-inputs">
+				<div
+					class="flex flex-col gap-2 items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0"
+				>
+					<div class="grid grid-cols-2 gap-4 relative w-full" id="form-inputs">
 						<div>
 							<label for="first-name" class="mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
 								>First Name</label
 							>
-							<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+							<!-- <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 								<svg
 									class="w-5 h-5 text-gray-500 dark:text-gray-400"
 									fill="currentColor"
@@ -24,7 +26,7 @@
 									></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
 									></path></svg
 								>
-							</div>
+							</div> -->
 							<input
 								class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 								placeholder="First Name"
@@ -37,7 +39,7 @@
 							<label for="last-name" class="mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
 								>Last Name</label
 							>
-							<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+							<!-- <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 								<svg
 									class="w-5 h-5 text-gray-500 dark:text-gray-400"
 									fill="currentColor"
@@ -47,7 +49,7 @@
 									></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
 									></path></svg
 								>
-							</div>
+							</div> -->
 							<input
 								class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 								placeholder="Last Name"
@@ -57,11 +59,11 @@
 							/>
 						</div>
 
-						<div>
-							<label for="email" class="mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-								>Email address</label
+						<div class="col-span-2 w-8/12">
+							<label
+								for="email"
+								class="flex justify-center gap-2 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
 							>
-							<div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
 								<svg
 									class="w-5 h-5 text-gray-500 dark:text-gray-400"
 									fill="currentColor"
@@ -71,7 +73,8 @@
 									></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
 									></path></svg
 								>
-							</div>
+								Email address
+							</label>
 							<input
 								class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 								placeholder="example@example.com"
