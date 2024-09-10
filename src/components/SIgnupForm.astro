@@ -13,7 +13,7 @@
 				>
 					<div class="grid grid-cols-2 gap-4 relative w-full" id="form-inputs">
 						<div class="flex flex-col">
-							<label for="first-name" class="mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+							<label for="first-name" class="mb-2 font-medium text-gray-900 dark:text-gray-300"
 								>First Name</label
 							>
 							<input
@@ -25,7 +25,7 @@
 							/>
 						</div>
 						<div class="flex flex-col">
-							<label for="last-name" class="mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+							<label for="last-name" class="mb-2 font-medium text-gray-900 dark:text-gray-300"
 								>Last Name</label
 							>
 							<input
@@ -40,7 +40,7 @@
 						<div class="justify-self-center col-span-2 w-8/12">
 							<label
 								for="email"
-								class="flex justify-center gap-2 mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+								class="flex justify-center gap-2 mb-2 font-medium text-gray-900 dark:text-gray-300"
 							>
 								<svg
 									class="w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -65,7 +65,7 @@
 					</div>
 					<div class="flex flex-col gap-4 justify-self-center">
 						<div class="flex flex-col">
-							<label for="phone-number" class="mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+							<label for="phone-number" class="mb-2 font-medium text-gray-900 dark:text-gray-300"
 								>Phone Number <span class="text-gray-400">(optional)</span></label
 							>
 							<input
@@ -76,9 +76,9 @@
 								name="phone-number"
 							/>
 						</div>
-						<div class="place-self-center">
-							<label for="text-opt-in" class="text-white py-2">Sign me up for SMS texts</label>
-							<input type="checkbox" id="text-opt-in" name="text-opt-in" />
+						<div class="flex mt-1 gap-4 place-self-center items-center">
+              <label for="text-opt-in" class="ms-2 font-medium text-gray-900 dark:text-gray-300">Sign me up for SMS texts</label>
+              <input id="text-opt-in" type="checkbox" name="text-opt-in" value="" class="w-4 h-4  dark:bg-gray-700 dark:text-blue-600 rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:border-gray-600">
 						</div>
 					</div>
 				</div>
@@ -91,7 +91,7 @@
 				<div>
 					<button
 						type="submit"
-						class="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+						class="py-3 px-5 my-2 w-full text-base font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
 						>Subscribe</button
 					>
 				</div>
