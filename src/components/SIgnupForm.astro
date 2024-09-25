@@ -1,0 +1,109 @@
+---
+
+---
+
+<section class="bg-white dark:bg-gray-900">
+	<div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+		<div class="mx-auto max-w-screen-md sm:text-center">
+			<h2 class="font-bold tracking-tight text-white sm:text-4xl">Sign up for our newsletter</h2>
+			<p class="my-3 text-lg leading-8 text-gray-300">Receive info and updates from our team!</p>
+			<form action="#" name="newsletter-signup" data-netlify="true">
+				<div
+					class="flex flex-col gap-4 items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0"
+				>
+					<div class="grid grid-cols-2 gap-4 relative w-full" id="form-inputs">
+						<div class="flex flex-col">
+							<label for="first-name" class="mb-2 font-medium text-gray-900 dark:text-gray-300"
+								>First Name</label
+							>
+							<input
+								class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+								placeholder="First Name"
+								id="first-name"
+								name="first-name"
+								required=""
+							/>
+						</div>
+						<div class="flex flex-col">
+							<label for="last-name" class="mb-2 font-medium text-gray-900 dark:text-gray-300"
+								>Last Name</label
+							>
+							<input
+								class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+								placeholder="Last Name"
+								id="last-name"
+								required=""
+								name="last-name"
+							/>
+						</div>
+
+						<div class="justify-self-center col-span-2 w-8/12">
+							<label
+								for="email"
+								class="flex justify-center gap-2 mb-2 font-medium text-gray-900 dark:text-gray-300"
+							>
+								<svg
+									class="w-5 h-5 text-gray-500 dark:text-gray-400"
+									fill="currentColor"
+									viewBox="0 0 20 20"
+									xmlns="http://www.w3.org/2000/svg"
+									><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+									></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+									></path></svg
+								>
+								Email address
+							</label>
+							<input
+								class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+								placeholder="example@example.com"
+								type="email"
+								id="email"
+								name="email"
+								required=""
+							/>
+						</div>
+					</div>
+					<div class="flex flex-col gap-4 justify-self-center">
+						<div class="flex flex-col">
+							<label for="phone-number" class="mb-2 font-medium text-gray-900 dark:text-gray-300"
+								>Phone Number <span class="text-gray-400">(optional)</span></label
+							>
+							<input
+								class="block p-3 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+								placeholder="E.g., 555-555-5555"
+								type="tel"
+								id="phone-number"
+								name="phone-number"
+							/>
+						</div>
+						<div class="flex mt-1 gap-4 place-self-center items-center">
+              <label for="text-opt-in" class="ms-2 font-medium text-gray-900 dark:text-gray-300">Sign me up for SMS texts</label>
+              <input id="text-opt-in" type="checkbox" name="text-opt-in" value="opt-in" class="w-4 h-4  dark:bg-gray-700 dark:text-blue-600 rounded dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:border-gray-600">
+						</div>
+					</div>
+				</div>
+				<p class="text-gray-400 my-4 text-sm">
+					By providing your cell phone number, you are consenting to receive recurring automated text messages
+					& automated calls from Blue Wave America with news, updates, and information about the campaign and
+					related issues. You can expect to receive no more than 1 message per month. Message and data rates
+					may apply. Text HELP for more information. Text STOP to stop receiving messages.
+				</p>
+				<div>
+					<button
+						type="submit"
+						class="py-3 px-5 my-2 w-full text-base font-medium text-center text-white rounded-lg border cursor-pointer bg-primary-700 border-primary-600 sm:rounded-none sm:rounded-r-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300"
+						>Subscribe</button
+					>
+				</div>
+			</form>
+		</div>
+		<div
+			class="mx-auto mt-4 max-w-screen-sm text-sm text-center text-gray-500 newsletter-form-footer dark:text-gray-300"
+		>
+			We care about the protection of your data. <a
+				href="/privacy-policy/"
+				class="font-medium text-primary-600 dark:text-primary-500 hover:underline">Read our Privacy Policy</a
+			>.
+		</div>
+	</div>
+</section>
