@@ -2,6 +2,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 export default function Carousel() {
   return (
@@ -20,6 +22,7 @@ export default function Carousel() {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       modules={[Autoplay, Pagination, Navigation, EffectFade]}
+      className='h-[800px] w-4/5'
     >
       <SwiperSlide>
         <img src='/graphics/stock1.jpg' />
