@@ -25,7 +25,7 @@ export default function Carousel() {
         <img src='/graphics/stock1.jpg' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/graphics/stock1.jpg' />
+        <img src='/graphics/stock2.jpg' />
       </SwiperSlide>
     </Swiper>
   );
