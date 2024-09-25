@@ -5,52 +5,53 @@ import Profile from "../components/Profile.astro";
 import StateButton from "../components/StateButton.astro";
 import { Image } from "astro:assets";
 import SIgnupForm from "../components/SIgnupForm.astro";
+import Carousel from "../components/Carousel.astro";
 
 const fightingForPoliticians = [
 	{
 		name: "Kamala Harris (D)",
 		position: "President",
-		img: "/images/kamala-harris.png",
+		img: "/people/kamala-harris.png",
 	},
 	{
 		name: "Tim Walz (D)",
 		position: "Vice President",
-		img: "/images/tim-walz.jpg",
+		img: "/people/tim-walz.jpg",
 	},
 	{
 		name: "Tammy Baldwin (D)",
 		position: "Wisconsin Senate",
-		img: "/images/tammy-baldwin.png",
+		img: "/people/tammy-baldwin.png",
 	},
 	{
 		name: "Bob Casey Jr. (D)",
 		position: "Pennsylvania Senate",
-		img: "/images/bob-casey.png",
+		img: "/people/bob-casey.png",
 	},
 	{
 		name: "Sherrod Brown (D)",
 		position: "Ohio Senate",
-		img: "/images/sherrod-brown.png",
+		img: "/people/sherrod-brown.png",
 	},
 	{
 		name: "Jon Tester (D)",
 		position: "Montana Senate",
-		img: "/images/jon-tester.png",
+		img: "/people/jon-tester.png",
 	},
 	{
 		name: "Ashley Ehasz (D)",
 		position: "Pennsylvania Congress (red to blue)",
-		img: "/images/ashley-ehasz.png",
+		img: "/people/ashley-ehasz.png",
 	},
 	{
 		name: "Colin Allred (D)",
 		position: "Democrat to defeat Ted Cruz",
-		img: "/images/colin-allred.jpg",
+		img: "/people/colin-allred.jpg",
 	},
 	{
 		name: "Shamaine Daniels (D)",
 		position: "Pennsylvania Congress (red to blue)",
-		img: "/images/shamaine-daniels.png",
+		img: "/people/shamaine-daniels.png",
 	},
 ];
 
@@ -58,22 +59,22 @@ const ourWorkPoliticians = [
 	{
 		name: "Raphael Warnock (D)",
 		position: "Georgia Senate",
-		img: "/images/raphael-warnock.jpg",
+		img: "/people/raphael-warnock.jpg",
 	},
 	{
 		name: "John Fetterman (D)",
 		position: "Pennsylvania Senate (red to blue)",
-		img: "/images/john-fetterman.jpg",
+		img: "/people/john-fetterman.jpg",
 	},
 	{
 		name: "Mark Kelly (D)",
 		position: "Arizona Senate",
-		img: "/images/mark-kelly.png",
+		img: "/people/mark-kelly.png",
 	},
 	{
 		name: "Josh Shapiro (D)",
 		position: "Pennsylvania Governor",
-		img: "/images/josh-shapiro.jpg",
+		img: "/people/josh-shapiro.jpg",
 	},
 ];
 
@@ -86,10 +87,11 @@ const states = ["Michigan", "Wisconsin", "Pennsylvania", "North Carolina"];
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Blue Wave America</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+		<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
 	</head>
 	<body class="bg-gray-50">
 		<Header />
+		<Carousel />
 		<div class="mx-auto max-w-4xl px-6 py-4">
 			<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">
 				<span class="block sm:inline">Empowering</span>
@@ -110,7 +112,7 @@ const states = ["Michigan", "Wisconsin", "Pennsylvania", "North Carolina"];
 			</p>
 			<div class="mt-6">
 				<Image
-					src="/images/Harris_Trump.png"
+					src="/graphics/Harris_Trump.png"
 					alt="Joe Biden and Donald Trump"
 					width="900"
 					height="150"
@@ -193,7 +195,7 @@ const states = ["Michigan", "Wisconsin", "Pennsylvania", "North Carolina"];
 				>
 					<Image
 						alt="Rural Democrats Turnout Fund logo"
-						src="/images/rural-turnout-fund.png"
+						src="/graphics/rural-turnout-fund.png"
 						height="300"
 						width="300"
 						class="flex-none object-cover w-full shadow-xl h-96 rounded-2xl aspect-square max-w-sm"
