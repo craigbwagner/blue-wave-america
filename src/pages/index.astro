@@ -5,7 +5,7 @@ import Profile from "../components/Profile.astro";
 import StateButton from "../components/StateButton.astro";
 import { Image } from "astro:assets";
 import SIgnupForm from "../components/SIgnupForm.astro";
-import Carousel from "../components/Carousel.astro";
+import Carousel from "../components/Carousel";
 
 const fightingForPoliticians = [
 	{
@@ -88,10 +88,11 @@ const states = ["Michigan", "Wisconsin", "Pennsylvania", "North Carolina"];
 		<meta name="generator" content={Astro.generator} />
 		<title>Blue Wave America</title>
 		<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	</head>
 	<body class="bg-gray-50">
 		<Header />
-		<Carousel />
+		<Carousel client:load />
 		<div class="mx-auto max-w-4xl px-6 py-4">
 			<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">
 				<span class="block sm:inline">Empowering</span>
