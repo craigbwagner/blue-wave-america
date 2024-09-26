@@ -1,0 +1,54 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Michigan from "./states/michigan.astro";
+
+const states = [
+  {
+    name: "Michigan",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+  },
+  {
+    name: "North Carolina",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+  },
+  {
+    name: "Pennsylvania",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+  },
+  {
+    name: "Wisconsin",
+    description: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+  },
+]
+---
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="generator" content={Astro.generator} />
+  <title>Blue Wave America</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+</head>
+<Header />
+<main class="ml-5">
+  <section>
+    <h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-gray-800 m:text-3xl">
+      States We're In
+    </h1>
+  </section>
+  {states.map(state => (
+    <section>
+      <h2 class="text-4xl font-extrabold text-gray-800">{state.name}</h2>
+      <div class="ml-5">
+        {state.description}
+        <div>
+          <h3>Counties</h3>
+          <div>
+            List of counties
+          </div>
+        </div>
+      </div>
+    </section>
+  ))}
+</main>
+<Footer />
