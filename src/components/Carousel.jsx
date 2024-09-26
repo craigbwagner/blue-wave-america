@@ -18,6 +18,7 @@ export default function Carousel() {
       }}
       navigation={true}
       slidesPerView={1}
+      centeredSlides={true}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       modules={[Autoplay, Pagination, Navigation, EffectFade]}
@@ -28,6 +29,9 @@ export default function Carousel() {
       </SwiperSlide>
       <SwiperSlide>
         <img src='/graphics/stock2.jpg' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src='/graphics/stock3.jpg' />
       </SwiperSlide>
     </Swiper>
   );
