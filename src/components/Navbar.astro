@@ -1,4 +1,9 @@
 ---
+import Image from "astro/components/Image.astro";
+import facebookIcon from '../../public/social-media-icons/facebook-icon.svg'
+import xIcon from '../../public/social-media-icons/x-logo.png'
+import instagramIcon from '../../public/social-media-icons/instagram-icon.svg'
+
 const menuItems = [];
 ---
 
@@ -116,6 +121,32 @@ const menuItems = [];
 							href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
 							target="_blank">Donate Now</a
 						>
+            <div class='flex justify-between gap-4 items-center'>
+              <a href='https://www.facebook.com/BlueWaveAmerica' target='_blank'>
+                <Image
+                  src={facebookIcon}
+                  alt='Facebook icon'
+                  height='36'
+                  width='36'
+                />
+              </a>
+              <a href='https://x.com/BluWaveAmerica' target='_blank'>
+                <Image
+                  src={xIcon}
+                  alt='X icon'
+                  height='40'
+                  width='40'
+                />
+              </a>
+              <a href='https://www.instagram.com/bluewaveamerica/' target='_blank'>
+                <Image
+                  src={instagramIcon}
+                  alt='Instagram icon'
+                  height='35'
+                  width='35'
+                />
+              </a>
+            </div>
 					</div>
 				</div>
 			</div>
