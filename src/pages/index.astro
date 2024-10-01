@@ -4,7 +4,7 @@ import Footer from "../components/Footer.astro";
 import Profile from "../components/Profile.astro";
 import StateButton from "../components/StateButton.astro";
 import { Image } from "astro:assets";
-import SIgnupForm from "../components/SIgnupForm.astro";
+import SignupForm from "../components/SignupForm.astro";
 import Carousel from "../components/Carousel";
 
 const fightingForPoliticians = [
@@ -78,7 +78,10 @@ const ourWorkPoliticians = [
 	},
 ];
 
-const states = ["Michigan", "Wisconsin", "Pennsylvania", "North Carolina"];
+const states = [
+  {name: "Michigan", link: "https://www.mobilize.us/bluewaveamericamichigan/"}, {name: "North Carolina", link: "https://www.mobilize.us/bluewaveamericanorthcarolina/"},
+  {name: "Pennsylvania", link: "https://www.mobilize.us/bluewaveamericapennsylvania/"},
+  {name: "Wisconsin", link: "https://www.mobilize.us/bluewaveamericawisconsin/"},];
 ---
 
 <html lang="en">
@@ -188,7 +191,7 @@ const states = ["Michigan", "Wisconsin", "Pennsylvania", "North Carolina"];
 			</div>
 		</div>
 
-		<SIgnupForm />
+		<SignupForm />
 		<div class="flex justify-center relative isolate mx-auto bg-gray-900">
 			<div class="max-w-6xl mt-6">
 				<div
