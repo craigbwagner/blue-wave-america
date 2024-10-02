@@ -1,17 +1,20 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+// import "swiper/css/effect-fade";
+import "swiper/css/effect-coverflow";
 
 export default function Carousel() {
   return (
     <Swiper
-      effect={"fade"}
+      effect={"coverflow"}
+      // fadeEffect={{crossfade: true}}
       autoplay={{
         delay: 4000,
-        pauseOnMouseEnter: true
+        pauseOnMouseEnter: true,
       }}
       pagination={{
         clickable: true
@@ -21,7 +24,7 @@ export default function Carousel() {
       centeredSlides={true}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
-      modules={[Autoplay, Pagination, Navigation, EffectFade]}
+      modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
       className='h-[500px] max-w-4xl'
     >
       <SwiperSlide>
