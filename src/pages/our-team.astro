@@ -1,61 +1,47 @@
 ---
 import Header from "../components/Header.astro";
-import Footer from '../components/Footer.astro'
-
+import Footer from "../components/Footer.astro";
 ---
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <meta name="generator" content={Astro.generator} />
-  <title>Blue Wave America</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<meta name="generator" content={Astro.generator} />
+	<title>Blue Wave America</title>
+	<link rel="icon" type="image/x-icon" href="/images/favicon.png" />
 </head>
 <body>
-    <Header />
-    <div class="bg-gray-50">
-      <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-10">
-        <div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-12">
-          <div class="space-y-5 sm:space-y-4">
-            <h2 class="text-3xl font-extrabold tracking-tight text-gray-800 sm:text-4xl">
-              About Us
-            </h2>
-            <p class="text-xl text-gray-500">
-              We are a team of rural Democrats across the country working to turn out our
-              neighbors, friends, and family to vote Blue. Founded by Mike Ward, a former
-              Congressman from Kentucky, Associate Director of the Peace Corps, and veteran
-              Democratic strategist, Blue Wave America has been focused since day one on expanding
-              this long-forgotten Democratic constituency.
-            </p>
-          </div>
-          <div class="lg:col-span-2">
-            <div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-12 sm:space-y-0 lg:gap-x-8">
-              <div>
-                <div class="flex items-center space-x-4 lg:space-x-6 md:mt-12">
-                  <img alt="Mike Ward" class="h-auto rounded-md w-44" src="/people/mike-ward.jpg">
-                  <div class="space-y-1 text-lg font-medium leading-6">
-                    <h3 class="text-xl">
-                      Mike Ward
-                    </h3>
-                    <p class="text-sky-600">
-                      Former Congressman Mike Ward, founder of Blue Wave America
-                    </p>
-                    <p class="max-w-xl mt-10 text-lg text-gray-500">
-                      “When I represented Louisville, KY in Congress, I saw firsthand how
-                      Republicans under Newt Gingrich began working to dismantle democracy and how
-                      they have made the lives of rural Americans so much harder. That’s why I
-                      started Blue Wave America&mdash;I know there are still Democrats we can turn
-                      out in deep red counties. We did it in 2022 and we are doing it full-steam
-                      for 2024.”
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <Footer />
-
+	<Header />
+	<main class="mx-auto max-w-4xl">
+		<section class="space-y-5 sm:space-y-4">
+			<h2 class="text-3xl font-extrabold tracking-tight text-gray-800 sm:text-4xl">Who We Are</h2>
+			<p class="text-xl text-gray-500">
+				We are a team of rural Democrats across the country working to turn out our neighbors, friends, and
+				family to vote Blue. Founded by Mike Ward, a former Congressman from Kentucky, Associate Director of the
+				Peace Corps, and veteran Democratic strategist, Blue Wave America has been focused since day one on
+				expanding this long-forgotten Democratic constituency.
+			</p>
+		</section>
+		<section class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-10">
+			<div class="grid grid-cols-1 gap-12 lg:gap-12">
+				<div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+					<div class="flex items-center space-x-4 lg:space-x-6 md:mt-12">
+						<img alt="Mike Ward" class="h-auto rounded-md w-44" src="/people/mike-ward.jpg" />
+						<div class="space-y-1 text-lg font-medium leading-6">
+							<h3 class="text-xl">Mike Ward</h3>
+							<p class="text-sky-600">Former Congressman Mike Ward, founder of Blue Wave America</p>
+							<p class="max-w-xl mt-10 text-lg text-gray-500">
+								“When I represented Louisville, KY in Congress, I saw firsthand how Republicans under
+								Newt Gingrich began working to dismantle democracy and how they have made the lives of
+								rural Americans so much harder. That's why I started Blue Wave America&mdash;I know
+								there are still Democrats we can turn out in deep red counties. We did it in 2022 and we
+								are doing it full-steam for 2024.”
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </body>
-
+<Footer />
