@@ -22,7 +22,7 @@ export default function Carousel() {
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
       modules={[Autoplay, Pagination, Navigation, EffectFade]}
-      className='h-[800px] w-4/5'
+      className='h-[500px] max-w-4xl'
     >
       <SwiperSlide>
         <img src='/graphics/stock1.jpg' />
