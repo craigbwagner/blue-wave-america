@@ -27,8 +27,8 @@ export default function Carousel() {
       modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
       className='h-[500px] max-w-4xl'
     >
-      <SwiperSlide>
-        <img src='/graphics/stock1.jpg' />
+      <SwiperSlide className="bg-[url('/graphics/stock1.jpg')] bg-contain">
+        <button>Button</button>
       </SwiperSlide>
       <SwiperSlide>
         <img src='/graphics/stock2.jpg' />
