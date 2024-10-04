@@ -22,8 +22,6 @@ export default function Carousel() {
       navigation={true}
       slidesPerView={1}
       centeredSlides={true}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
       modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
       className='h-[500px] max-w-4xl'
     >
