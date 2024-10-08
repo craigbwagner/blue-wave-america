@@ -4,27 +4,24 @@ import facebookIcon from "../../public/social-media-icons/facebook-icon.svg";
 import xIcon from "../../public/social-media-icons/x-logo.png";
 import instagramIcon from "../../public/social-media-icons/instagram-icon.svg";
 
-const menuItems = [
-	{
-		name: "Volunteer",
-		href: "",
-	},
-	{
-		name: "Careers",
-		href: "/careers",
-	},
-];
+// const menuItems = [
+// 	{
+// 		name: "Volunteer",
+// 		href: "/volunteer",
+// 	},
+// 	{
+// 		name: "Careers",
+// 		href: "/careers",
+// 	},
+// ];
 ---
 
 <script>
-	const dropdownButton = document.getElementById("dropdown-button");
-	const dropdownMenu = document.getElementById("dropdown-menu");
-	dropdownButton.addEventListener("mouseover", () => {
-		dropdownMenu.classList.toggle("hidden");
-	});
-	dropdownButton.addEventListener("mouseout", () => {
-      dropdownMenu.classList.toggle("hidden");
-	});
+	// const dropdownButton = document.getElementById("dropdown-button");
+	// const dropdownMenu = document.getElementById("dropdown-menu");
+	// dropdownButton.addEventListener("click", () => {
+	// 	dropdownMenu.classList.toggle("hidden");
+	// });
 
 	const mobileDropdownButton = document.getElementById("mobile-dropdown-button");
 	const mobileDropdownMenu = document.getElementById("mobile-dropdown-menu");
@@ -85,7 +82,7 @@ const menuItems = [
 					<div class="flex justify-between items-center md:w-screen max-w-screen-lg">
 						<a
 							class="text-gray-200 text-lg font-medium bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl"
-							href="https://mobilize.us/s/zGjLUP"
+							href="/volunteer"
 							target="_blank">Volunteer</a
 						>
 						<a
@@ -117,7 +114,7 @@ const menuItems = [
               <a href="/work-with-us">
 								Work With Us
               </a>
-								<svg
+								<!-- <svg
 									class="ml-2 h-5 w-5"
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 20 20"
@@ -127,13 +124,13 @@ const menuItems = [
 										fill-rule="evenodd"
 										d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
 										clip-rule="evenodd"></path>
-								</svg>
+								</svg> -->
 							</button>
 							<div
 								class="origin-top-right absolute z-20 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 hidden"
 								id="dropdown-menu"
 							>
-								{
+								<!-- {
 									menuItems.map((item) => (
 										<a
 											href={item.href}
@@ -142,7 +139,7 @@ const menuItems = [
 											{item.name}
 										</a>
 									))
-								}
+								} -->
 							</div>
 						</div>
 						<div class="flex justify-between gap-4 items-center">
@@ -169,6 +166,11 @@ const menuItems = [
 
 	<!-- Mobile menu, show/hide based on menu state. -->
 	<div class="sm:hidden" id="mobile-menu">
+    <button
+      type="button"
+      class="text-gray-700 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-1.5 rounded-md text-base font-medium"
+      id="mobile-dropdown-button"
+    >
 		<div class="px-2 py-1 hidden" id="mobile-menu-links">
 			<a
 				href="/"
@@ -190,13 +192,12 @@ const menuItems = [
 				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
 				>States</a
 			>
-			<div class="relative">
-				<button
-					type="button"
-					class="text-gray-700 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-1.5 rounded-md text-base font-medium"
-					id="mobile-dropdown-button"
-				>
-					Work With Us
+      <a
+      href="/states"
+      class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+      >Work With Us</a
+    >
+			<!-- <div class="relative">
 					<svg
 						class="ml-2 h-5 w-5 inline"
 						xmlns="http://www.w3.org/2000/svg"
@@ -220,14 +221,14 @@ const menuItems = [
 							</a>
 						))
 					}
-				</div>
+				</div> -->
 				<a
 					href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
 					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
 					target="_blank">Donate</a
 				>
 				<a
-					href="https://mobilize.us/s/zGjLUP"
+					href="/volunteer"
 					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
 					target="_blank">Volunteer</a
 				>
