@@ -1,27 +1,32 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
 
 const states = [
 	{
 		name: "Michigan",
 		description:
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+      img: "https://presentationmall.com/wp-content/uploads/mi-multicolor.jpg"
 	},
 	{
 		name: "North Carolina",
 		description:
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+      img: "https://vectordad.com/wp-content/uploads/2024/07/North-Carolina-County-Map-Multi-Colored.png"
 	},
 	{
 		name: "Pennsylvania",
 		description:
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+      img: "https://i.pinimg.com/originals/93/89/ed/9389ed71fe492b3eaf27bc5a1c66ca8c.gif"
 	},
 	{
 		name: "Wisconsin",
 		description:
 			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+      img: "https://www.waterproofpaper.com/printable-maps/county-map/wisconsin-county-map.gif"
 	},
 ];
 ---
@@ -41,9 +46,10 @@ const states = [
 	<section class="flex flex-col gap-8">
 		{
 			states.map((state) => (
-				<div class="px-6 mx-auto max-w-5xl">
+				<div class="flex flex-col px-6 mx-auto max-w-5xl">
 					<h2 class="text-4xl font-extrabold text-gray-800">{state.name}</h2>
 					<div class="ml-5 text-lg">{state.description}</div>
+          <Image src={state.img} alt="State Map" height={1000} width={400} class="my-6 self-center"/>
 					<div>
 						<h3 class="my-2 text-2xl font-extrabold text-gray-800">Counties</h3>
 						<div>*List of counties*</div>
