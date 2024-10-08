@@ -19,7 +19,10 @@ const menuItems = [
 <script>
 	const dropdownButton = document.getElementById("dropdown-button");
 	const dropdownMenu = document.getElementById("dropdown-menu");
-	dropdownButton.addEventListener("click", () => {
+	dropdownButton.addEventListener("mouseover", () => {
+		dropdownMenu.classList.toggle("hidden");
+	});
+	dropdownButton.addEventListener("mouseout", () => {
 		dropdownMenu.classList.toggle("hidden");
 	});
 
@@ -86,19 +89,24 @@ const menuItems = [
 							target="_blank">Volunteer</a
 						>
 						<a
+							href="/"
+							class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md text-med lg:text-xl"
+							>Home</a
+						>
+            <a
+              href="/our-impact"
+              class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
+              >Impact</a
+            >
+            <a
+              href="/our-team"
+              class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
+              >Our Team</a
+            >
+						<a
 							href="/states"
 							class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md text-med lg:text-xl"
 							>States</a
-						>
-						<a
-							href="/our-impact"
-							class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
-							>Impact</a
-						>
-						<a
-							href="/our-team"
-							class="text-gray-200 text-lg transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
-							>Our Team</a
 						>
 						<div class="relative">
 							<button
@@ -161,19 +169,24 @@ const menuItems = [
 	<div class="sm:hidden" id="mobile-menu">
 		<div class="px-2 py-1 hidden" id="mobile-menu-links">
 			<a
+				href="/"
+				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+				>Home</a
+			>
+      <a
+        href="/our-impact"
+        class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+        >Impact</a
+      >
+      <a
+        href="/our-team"
+        class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+        >Our Team</a
+      >
+			<a
 				href="/states"
 				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
 				>States</a
-			>
-			<a
-				href="/our-impact"
-				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
-				>Impact</a
-			>
-			<a
-				href="/our-team"
-				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
-				>Our Team</a
 			>
 			<div class="relative">
 				<button
