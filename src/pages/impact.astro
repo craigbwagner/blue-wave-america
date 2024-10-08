@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { Image } from "astro:assets";
 ---
 
 <head>
@@ -11,5 +12,21 @@ import Footer from "../components/Footer.astro";
 	<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
 </head>
 <Header />
-<main class="ml-5 my-10"></main>
+<main class="ml-5 my-10">
+	<section>
+		<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">Our Impact</h1>
+	</section>
+	<section class="flex flex-col gap-8">
+    <h2 class="text-4xl font-extrabold text-gray-800">Heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias culpa impedit voluptates eum dolorum a cupiditate tempora dolore veniam et. Consectetur, numquam ex ipsam repellat reiciendis necessitatibus nihil officia quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur animi at ab eum saepe ipsam. Quasi vitae tempora placeat doloremque deserunt, aperiam dolorem? Dicta ut, reprehenderit necessitatibus odit cumque pariatur.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quam illo, vel accusantium blanditiis velit veniam deleniti dolore quo dolor possimus repellendus commodi. Molestiae perspiciatis earum impedit ab dolores minima? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quasi, ducimus quisquam expedita dolorum doloribus eos incidunt sint ipsam ut dolores veritatis soluta velit ea, adipisci cupiditate placeat architecto sequi.</p>
+    <Image src="https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Stock Image" height={1000} width={400} class="self-center"/>
+	</section>
+	<section class="flex flex-col gap-8">
+    <h2 class="text-4xl font-extrabold text-gray-800">Heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias culpa impedit voluptates eum dolorum a cupiditate tempora dolore veniam et. Consectetur, numquam ex ipsam repellat reiciendis necessitatibus nihil officia quibusdam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur animi at ab eum saepe ipsam. Quasi vitae tempora placeat doloremque deserunt, aperiam dolorem? Dicta ut, reprehenderit necessitatibus odit cumque pariatur.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita quam illo, vel accusantium blanditiis velit veniam deleniti dolore quo dolor possimus repellendus commodi. Molestiae perspiciatis earum impedit ab dolores minima? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum quasi, ducimus quisquam expedita dolorum doloribus eos incidunt sint ipsam ut dolores veritatis soluta velit ea, adipisci cupiditate placeat architecto sequi.</p>
+    <Image src="https://images.pexels.com/photos/1550340/pexels-photo-1550340.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Stock Image" height={1000} width={400} class="self-center"/>
+	</section>
+</main>
 <Footer />
