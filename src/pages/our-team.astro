@@ -26,19 +26,19 @@ const team = [
 	<main class="mx-auto max-w-4xl">
 		<section class="space-y-5 sm:space-y-4">
 			<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">Who We Are</h1>
-			<p class="text-xl text-gray-500">
+			<p class="text-lg text-gray-500">
 				We are a team of rural Democrats across the country working to turn out our neighbors, friends, and
 				family to vote Blue. Founded by Mike Ward, a former Congressman from Kentucky, Associate Director of the
 				Peace Corps, and veteran Democratic strategist, Blue Wave America has been focused since day one on
 				expanding this long-forgotten Democratic constituency.
 			</p>
 		</section>
-		<section class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-8">
+		<section class="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-4">
 			<div class="grid grid-cols-1 gap-12 lg:gap-12">
 				{
 					team.map((teamMember) => (
 						<div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-12 sm:space-y-0 lg:gap-x-8">
-							<div class="flex items-center space-x-4 lg:space-x-6 md:mt-12">
+							<div class="flex items-center space-x-4 lg:space-x-6">
 								<img alt={teamMember.imgAlt} class="h-auto rounded-md w-44" src={teamMember.src} />
 								<div class="space-y-1 text-lg font-medium leading-6">
 									<h3 class="text-xl">{teamMember.name}</h3>
