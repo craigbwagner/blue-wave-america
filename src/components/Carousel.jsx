@@ -13,7 +13,7 @@ export default function Carousel() {
       effect={"coverflow"}
       // fadeEffect={{crossfade: true}}
       autoplay={{
-        delay: 4000,
+        delay: 5000,
         pauseOnMouseEnter: true,
       }}
       pagination={{
@@ -23,18 +23,22 @@ export default function Carousel() {
       slidesPerView={1}
       centeredSlides={true}
       modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
-      className='h-[500px] max-w-4xl'
+      className='h-[600px] max-w-4xl'
     >
-      <SwiperSlide className="flex flex-col h-[500px] justify-around content-evenly bg-[url('/graphics/stock1.jpg')] bg-contain">
-        <h2>Placeholder</h2>
+      <SwiperSlide className="flex flex-col h-[500px] justify-around content-evenly">
+        {/* <h2>Placeholder</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam quos commodi nobis! Perferendis repudiandae voluptate, aspernatur fuga odio dignissimos ullam vitae consectetur qui vel, quae exercitationem, facere unde sit.</p>
-        <button className='bg-slate-600 p-2 mx-auto'>Button</button>
+        <button className='bg-slate-600 p-2 mx-auto'>Button</button> */}
+        <img src='/graphics/carousel1.jpeg' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/graphics/stock2.jpg' />
+        <img src='/graphics/carousel2.jpg' />
       </SwiperSlide>
       <SwiperSlide>
-        <img src='/graphics/stock3.jpg' />
+        <img src='/graphics/carousel3.jpeg' />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src='/graphics/carousel4.jpeg' />
       </SwiperSlide>
     </Swiper>
   );
