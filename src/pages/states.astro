@@ -6,27 +6,27 @@ import { Image } from "astro:assets";
 const states = [
 	{
 		name: "Michigan",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
-      img: "https://presentationmall.com/wp-content/uploads/mi-multicolor.jpg"
+		description: "",
+    counties: ["Alcona", "Alger", "Alpena", "Antrim", "Arenac", "Baraga", "Barry", "Cheboygan", "Chippewa", "Clare", "Crawford", "Delta", "Dickinson", "Gladwin", "Gratiot", "Huron", "Ionia", "Iosco", "Iron", "Kalkaska", "Lake", "Luce", "Mackinac", "Mason", "Mecosta", "Menominee", "Missaukee", "Montcalm", "Montmorency", "Newaygo", "Oceana", "Ogemaw", "Ontonagon", "Osceola", "Oscoda", "Otsego", "Presque Isle", "Roscommon", "Sanilac", "Schoolcraft", "Tuscola", "Wexford"],
+      img: "/graphics/MI-map.png"
 	},
 	{
 		name: "North Carolina",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
-      img: "https://vectordad.com/wp-content/uploads/2024/07/North-Carolina-County-Map-Multi-Colored.png"
+		description: "",
+    counties: ["Alexander", "Alleghany", "Ashe", "Avery", "Beaufort", "Burke", "Caldwell", "Camden", "Carteret", "Cherokee", "Chowan", "Clay", "Cleveland", "Craven", "Currituck", "Dare", "Davie", "Gates", "Graham", "Haywood", "Hyde", "Jackson", "Lincoln", "Macon", "Madison", "McDowell", "Mitchell", "Pamlico", "Pender", "Perquimans", "Polk", "Rockingham", "Rutherford", "Sampson", "Stokes", "Surry", "Swain", "Transylvania", "Tyrrell", "Wilkes", "Yadkin", "Yancey"],
+      img: "/graphics/NC-map.png"
 	},
 	{
 		name: "Pennsylvania",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
+		description: "",
+      counties: ["Armstrong", "Bedford", "Bradford", "Cameron", "Carbon", "Clarion", "Clearfield", "Clinton", "Columbia", "Crawford", "Elk", "Forest", "Fulton", "Greene", "Huntington", "Indiana", "Jefferson", "Juniata", "Lawrence", "McKean", "Mifflin", "Montour", "Perry", "Pike", "Potter", "Snyder", "Sommerset", "Sullivan", "Susquehanna", "Tioga", "Union", "Venango", "Warren", "Wayne", "Wyoming"],
       img: "/graphics/PA-map.png"
 	},
 	{
 		name: "Wisconsin",
-		description:
-			"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste quos voluptates tempore omnis expedita a voluptatum, amet culpa blanditiis accusamus, atque labore sint temporibus soluta dolores, fugiat id quidem. Repellendus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam voluptate libero amet totam atque pariatur vel mollitia maiores voluptatum accusamus incidunt aperiam debitis tempora odit reprehenderit doloremque, earum corporis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut tenetur odio in molestiae illo voluptatibus temporibus qui, esse cumque totam. Suscipit incidunt velit numquam assumenda sunt iste ducimus dolores reiciendis?",
-      img: "https://www.waterproofpaper.com/printable-maps/county-map/wisconsin-county-map.gif"
+		description: "",
+    counties: ["Adams", "Barron", "Buffalo", "Burnett", "Chippewa", "Clark", "Columbia", "Crawford", "Dunn", "Florence", "Forest", "Grant", "Green", "Green Lake", "Iowa", "Iron", "Jackson", "Juneau", "Kewaunee", "Lafayette", "Langlade", "Linkcoln", "Manitowoc", "Marinette", "Menominee", "Monroe", "Oconto", " Oneida", "Pepin", "Pierce", "Polk", "Portage", "Price", "Richland", "Rusk", "Sauk", "Sawyer", "Taylor", "Trempealeau", "Vernon", "Vilas", "Washburn", "Waupaca", "Waushara"],
+      img: "/graphics/WI-map.png"
 	},
 ];
 ---
@@ -39,21 +39,23 @@ const states = [
 	<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
 </head>
 <Header />
-<main class="ml-5 my-10">
-	<section>
-		<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">States We're In</h1>
-	</section>
+<main class="flexml-5 my-10">
+		<h1 class="text-4xl text-center mb-6 font-extrabold tracking-tight text-sky-600 md:text-5xl">States We're In</h1>
 	<section class="flex flex-col gap-8">
 		{
 			states.map((state) => (
 				<div class="flex flex-col px-6 mx-auto max-w-5xl">
-					<h2 class="text-4xl font-extrabold text-gray-800">{state.name}</h2>
+					<h2 class="text-3xl font-extrabold text-gray-800">{state.name}</h2>
 					<div class="ml-5 mt-3 text-lg">{state.description}</div>
 					<div>
 						<h3 class="my-2 text-2xl font-extrabold text-gray-800">Counties</h3>
-						<div>*List of counties*</div>
+						<ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {state.counties.map(county => (
+                <li>{county}</li>
+              ))}
+            </ul>
 					</div>
-          <Image src={state.img} alt="State Map" height={1000} width={600} class="my-6 self-center"/>
+          <Image src={state.img} alt="State Map" height={1000} width={800} class="my-6 self-center"/>
 				</div>
 			))
 		}
