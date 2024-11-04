@@ -25,14 +25,14 @@ export default function Carousel() {
       modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
       className='h-[600px] max-w-4xl'
     >
+      <SwiperSlide>
+        <img src='/graphics/carousel2.jpg' />
+      </SwiperSlide>
       <SwiperSlide className="flex flex-col h-[500px] justify-around content-evenly">
         {/* <h2>Placeholder</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam quos commodi nobis! Perferendis repudiandae voluptate, aspernatur fuga odio dignissimos ullam vitae consectetur qui vel, quae exercitationem, facere unde sit.</p>
         <button className='bg-slate-600 p-2 mx-auto'>Button</button> */}
         <img src='/graphics/carousel1.jpeg' />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src='/graphics/carousel2.jpg' />
       </SwiperSlide>
       <SwiperSlide>
         <img src='/graphics/carousel3.jpeg' />
