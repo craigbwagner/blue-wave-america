@@ -5,52 +5,53 @@ import Profile from "../components/Profile.astro";
 import StateButton from "../components/StateButton.astro";
 import { Image } from "astro:assets";
 import SignupForm from "../components/SignupForm.astro";
+import Carousel from "../components/Carousel";
 
 const fightingForPoliticians = [
 	{
 		name: "Kamala Harris (D)",
 		position: "President",
-		img: "/images/kamala-harris.png",
+		img: "/people/kamala-harris.png",
 	},
 	{
 		name: "Tim Walz (D)",
 		position: "Vice President",
-		img: "/images/tim-walz.jpg",
+		img: "/people/tim-walz.jpg",
 	},
 	{
 		name: "Tammy Baldwin (D)",
 		position: "Wisconsin Senate",
-		img: "/images/tammy-baldwin.png",
+		img: "/people/tammy-baldwin.png",
 	},
 	{
 		name: "Bob Casey Jr. (D)",
 		position: "Pennsylvania Senate",
-		img: "/images/bob-casey.png",
+		img: "/people/bob-casey.png",
 	},
 	{
 		name: "Sherrod Brown (D)",
 		position: "Ohio Senate",
-		img: "/images/sherrod-brown.png",
+		img: "/people/sherrod-brown.png",
 	},
 	{
 		name: "Jon Tester (D)",
 		position: "Montana Senate",
-		img: "/images/jon-tester.png",
+		img: "/people/jon-tester.png",
 	},
 	{
 		name: "Ashley Ehasz (D)",
 		position: "Pennsylvania Congress (red to blue)",
-		img: "/images/ashley-ehasz.png",
+		img: "/people/ashley-ehasz.png",
 	},
 	{
 		name: "Colin Allred (D)",
 		position: "Democrat to defeat Ted Cruz",
-		img: "/images/colin-allred.jpg",
+		img: "/people/colin-allred.jpg",
 	},
 	{
 		name: "Shamaine Daniels (D)",
 		position: "Pennsylvania Congress (red to blue)",
-		img: "/images/shamaine-daniels.png",
+		img: "/people/shamaine-daniels.png",
 	},
 ];
 
@@ -58,29 +59,31 @@ const ourWorkPoliticians = [
 	{
 		name: "Raphael Warnock (D)",
 		position: "Georgia Senate",
-		img: "/images/raphael-warnock.jpg",
+		img: "/people/raphael-warnock.jpg",
 	},
 	{
 		name: "John Fetterman (D)",
 		position: "Pennsylvania Senate (red to blue)",
-		img: "/images/john-fetterman.jpg",
+		img: "/people/john-fetterman.jpg",
 	},
 	{
 		name: "Mark Kelly (D)",
 		position: "Arizona Senate",
-		img: "/images/mark-kelly.png",
+		img: "/people/mark-kelly.png",
 	},
 	{
 		name: "Josh Shapiro (D)",
 		position: "Pennsylvania Governor",
-		img: "/images/josh-shapiro.jpg",
+		img: "/people/josh-shapiro.jpg",
 	},
 ];
 
 const states = [
-  {name: "Michigan", link: "https://www.mobilize.us/bluewaveamericamichigan/"}, {name: "North Carolina", link: "https://www.mobilize.us/bluewaveamericanorthcarolina/"},
-  {name: "Pennsylvania", link: "https://www.mobilize.us/bluewaveamericapennsylvania/"},
-  {name: "Wisconsin", link: "https://www.mobilize.us/bluewaveamericawisconsin/"},];
+	{ name: "Michigan", link: "https://www.mobilize.us/bluewaveamericamichigan/" },
+	{ name: "North Carolina", link: "https://www.mobilize.us/bluewaveamericanorthcarolina/" },
+	{ name: "Pennsylvania", link: "https://www.mobilize.us/bluewaveamericapennsylvania/" },
+	{ name: "Wisconsin", link: "https://www.mobilize.us/bluewaveamericawisconsin/" },
+];
 ---
 
 <html lang="en">
@@ -89,11 +92,13 @@ const states = [
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Blue Wave America</title>
-		<link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+		<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 	</head>
 	<body class="bg-gray-50">
 		<Header />
-		<div class="mx-auto max-w-4xl px-6 py-4">
+		<Carousel client:load />
+		<div class="mx-auto max-w-4xl px-6 my-8">
 			<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">
 				<span class="block sm:inline">Empowering</span>
 				<span class="block text-gray-800 sm:inline">Rural Democrats</span>
@@ -113,7 +118,7 @@ const states = [
 			</p>
 			<div class="mt-6">
 				<Image
-					src="/images/Harris_Trump.png"
+					src="/graphics/Harris_Trump.png"
 					alt="Kamala Harris and Donald Trump"
 					width="900"
 					height="150"
@@ -188,43 +193,6 @@ const states = [
 			</div>
 		</div>
 
-		<div class="px-4 py-12 mx-auto max-w-6xl sm:px-6 lg:px-8 lg:py-10">
-			<div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-12">
-				<div class="space-y-5 sm:space-y-4">
-					<h2 class="text-3xl font-extrabold tracking-tight text-gray-800">About Us</h2>
-					<p class="text-lg text-gray-500">
-						We are a team of rural Democrats across the country working to turn out our neighbors, friends,
-						and family to vote Blue. Founded by Mike Ward, a former Congressman from Kentucky, Associate
-						Director of the Peace Corps, and veteran Democratic strategist, Blue Wave America has been
-						focused since day one on expanding this long-forgotten Democratic constituency.
-					</p>
-				</div>
-				<div class="lg:col-span-2">
-					<div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-10 sm:space-y-0 lg:gap-x-8">
-						<div class="flex items-center space-x-4 mt-7 lg:space-x-6">
-							<Image
-								alt="Mike Ward"
-								src="/images/mike-ward.jpg"
-								height="200"
-								width="200"
-								class="rounded-md"
-							/>
-							<div class="space-y-1 text-lg font-medium leading-6">
-								<h3 class="text-2xl font-bold">Mike Ward</h3>
-								<p class="text-sky-600">Former Congressman Mike Ward, founder of Blue Wave America</p>
-								<p class="max-w-xl mt-10 text-lg text-gray-500">
-									“When I represented Louisville, KY in Congress, I saw firsthand how Republicans
-									under Newt Gingrich began working to dismantle democracy and how they have made the
-									lives of rural Americans so much harder. That's why I started Blue Wave
-									America&mdash;I know there are still Democrats we can turn out in deep red counties.
-									We did it in 2022 and we are doing it full-steam for 2024.”
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<SignupForm />
 		<div class="flex justify-center relative isolate mx-auto bg-gray-900">
 			<div class="max-w-6xl mt-6">
@@ -233,7 +201,7 @@ const states = [
 				>
 					<Image
 						alt="Rural Democrats Turnout Fund logo"
-						src="/images/rural-turnout-fund.png"
+						src="/graphics/rural-turnout-fund.png"
 						height="300"
 						width="300"
 						class="flex-none object-cover w-full shadow-xl h-96 rounded-2xl aspect-square max-w-sm"
