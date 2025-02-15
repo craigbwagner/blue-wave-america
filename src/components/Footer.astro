@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import facebookIcon from '../../public/social-media-icons/facebook-icon.svg'
 import xIcon from '../../public/social-media-icons/x-logo.png'
 import instagramIcon from '../../public/social-media-icons/instagram-icon.svg'
+import blueskyIcon from '../../public/social-media-icons/bluesky-icon.png'
 import SignupForm from './SignupForm.astro';
 ---
 <footer class="w-full bg-gray-900 flex flex-col items-center">
@@ -23,6 +24,14 @@ import SignupForm from './SignupForm.astro';
       <Image
         src={instagramIcon}
         alt='Instagram icon'
+        height='35'
+        width='35'
+      />
+    </a>
+    <a href='https://bsky.app/profile/bluewaveamerica.bsky.social' target='_blank'>
+      <Image
+        src={blueskyIcon}
+        alt='BlueSky icon'
         height='35'
         width='35'
       />

@@ -8,52 +8,32 @@ import SignupForm from "../components/SignupForm.astro";
 import Carousel from "../components/Carousel";
 
 const fightingForPoliticians = [
-	{
-		name: "Kamala Harris (D)",
-		position: "President",
-		img: "/people/kamala-harris.png",
-	},
-	{
-		name: "Tim Walz (D)",
-		position: "Vice President",
-		img: "/people/tim-walz.jpg",
-	},
-	{
-		name: "Tammy Baldwin (D)",
-		position: "Wisconsin Senate",
-		img: "/people/tammy-baldwin.png",
-	},
-	{
-		name: "Bob Casey Jr. (D)",
-		position: "Pennsylvania Senate",
-		img: "/people/bob-casey.png",
-	},
-	{
-		name: "Sherrod Brown (D)",
-		position: "Ohio Senate",
-		img: "/people/sherrod-brown.png",
-	},
-	{
-		name: "Jon Tester (D)",
-		position: "Montana Senate",
-		img: "/people/jon-tester.png",
-	},
-	{
-		name: "Ashley Ehasz (D)",
-		position: "Pennsylvania Congress (red to blue)",
-		img: "/people/ashley-ehasz.png",
-	},
-	{
-		name: "Colin Allred (D)",
-		position: "Democrat to defeat Ted Cruz",
-		img: "/people/colin-allred.jpg",
-	},
-	{
-		name: "Shamaine Daniels (D)",
-		position: "Pennsylvania Congress (red to blue)",
-		img: "/people/shamaine-daniels.png",
-	},
-];
+  {
+    name: "Gay Valimont (D)",
+    position: "Florida 1st Congressional District",
+    img: "/people/gay-valimont.jpeg"
+  },
+  {
+    name: "Joshua Weil (D)",
+    position: "Florida 6th Congressional District",
+    img: "/people/joshua-weil.jpg"
+  },
+  {
+    name: "Blake Gendebien (D)",
+    position: "New York 21st Congressional District",
+    img: "/people/blake-gendebien.png"
+  },
+  {
+    name: "Unknown",
+    position: "Future Democratic Nominee for Virginia Governor",
+    img: "/people/user.png"
+  },
+  {
+    name: "Unknown",
+    position: "Florida 1st Congressional District",
+    img: "/people/user.png"
+  },
+  ];
 
 const ourWorkPoliticians = [
 	{
@@ -67,22 +47,34 @@ const ourWorkPoliticians = [
 		img: "/people/john-fetterman.jpg",
 	},
 	{
-		name: "Mark Kelly (D)",
-		position: "Arizona Senate",
-		img: "/people/mark-kelly.png",
-	},
-	{
 		name: "Josh Shapiro (D)",
 		position: "Pennsylvania Governor",
 		img: "/people/josh-shapiro.jpg",
 	},
+  {
+    name: "Tammy Baldwin (D)",
+		position: "Wisconsin Senate",
+		img: "/people/tammy-baldwin.png",
+	},
+  {
+    name: "Josh Stein (D)",
+    position: "North Carolina Governor",
+    img: "/people/josh-stein.png",
+  },
+  {
+		name: "Elissa Slotkin (D)",
+		position: "Michigan Senate",
+		img: "/people/elissa-slotkin.jpg",
+	},
+  {
+		name: "Jon Ossoff (D)",
+		position: "Georgia Senate",
+		img: "/people/jon-ossoff.jpg",
+	},
 ];
 
 const states = [
-	{ name: "Michigan", link: "https://www.mobilize.us/bluewaveamericamichigan/" },
-	{ name: "North Carolina", link: "https://www.mobilize.us/bluewaveamericanorthcarolina/" },
-	{ name: "Pennsylvania", link: "https://www.mobilize.us/bluewaveamericapennsylvania/" },
-	{ name: "Wisconsin", link: "https://www.mobilize.us/bluewaveamericawisconsin/" },
+	{ name: "Virginia", link: "https://www.mobilize.us/bluewavevirginia/event/755289/?referring_vol=6223049&rname=Oscar&share_context=event_details&share_medium=copy_link " },
 ];
 ---
 
@@ -112,14 +104,14 @@ const states = [
 			</p>
 			<p class="py-2 text-lg text-gray-500">
 				That's why we started Blue Wave America&mdash;to fund and train expert on-the-ground Democratic turnout
-				staffers in rural counties in key swing states. We're on a mission to equip our staffers with
+				staffers in rural counties in key states. We're on a mission to equip our staffers with
 				cutting-edge voter turnout tools to get out the vote where Democrats have given too much ground to
 				Republicans for far too long.
 			</p>
 			<div class="mt-6">
 				<Image
-					src="/graphics/Harris_Trump.png"
-					alt="Kamala Harris and Donald Trump"
+					src="/graphics/musk-trump.png"
+					alt="Elon Musk and Donald Trump"
 					width="900"
 					height="150"
 					class="rounded shadow mx-auto"
@@ -129,14 +121,11 @@ const states = [
 		<div class="mx-auto max-w-4xl py-2 px-6">
 			<h2 class="text-4xl font-extrabold text-gray-800">Let's be clear:</h2>
 			<p class="my-4 text-lg text-gray-500">
-				MAGA Republicans like <strong>Ted Cruz</strong>, <strong>Marjorie Taylor Greene</strong>, <strong
-					>Jim Jordan</strong
-				>, <strong>Lauren Boebert</strong>, and more could be defeated as long as Democrats invest in rural
-				communities...and they live in true swing states that Vice President Harris needs in 2024.
+				MAGA Republicans like <strong>Ted Cruz</strong>, <strong>Marjorie Taylor Greene</strong>, <strong>Jim Jordan</strong>, <strong>Lauren Boebert</strong>, and more could be defeated as long as Democrats invest in rural communities...and they live in important districts that Democrats need in 2026.
 			</p>
 			<p class="mt-4 text-lg text-gray-500">
 				That's why we're using our expert team of Democratic organizers to invest in flipping rural seats blue
-				and increase rural Democratic votes in key swing states. We know full well that <strong
+				and increase rural Democratic votes in key states. We know full well that <strong
 					>there are Democrats in those districts that need to be shown that their vote counts</strong
 				> and we're fighting to make their voices heard.
 			</p>
@@ -152,8 +141,7 @@ const states = [
 				<li class="my-1">A strong network of rural Democrat volunteers and activists</li>
 			</ul>
 			<p class="my-4 text-lg text-gray-500">
-				Join us in our fight to defeat the worst Republicans in Congress, to keep MAGA Republicans away from the
-				White House, and to give every American a voice in our system.
+				Join us in our fight against MAGA Republicans like Donald Trump and Elon Musk. Help us defeat the worst Republicans in Congress and give every American a voice in our system.
 			</p>
 		</div>
 		<div class="flex justify-center relative mx-auto py-4">
@@ -198,24 +186,44 @@ const states = [
 				<div
 					class="flex flex-col max-w-2xl gap-16 px-6 py-10 mx-auto bg-white/5 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-12 xl:gap-x-20 xl:px-20"
 				>
-					<Image
-						alt="Rural Democrats Turnout Fund logo"
-						src="/graphics/rural-turnout-fund.png"
-						height="300"
-						width="300"
-						class="flex-none object-cover w-full shadow-xl h-96 rounded-2xl aspect-square max-w-sm"
-					/>
+          <div>
+            <Image
+            alt="Rural Democrats Turnout Fund logo"
+            src="/graphics/rural-turnout-fund.png"
+            height="300"
+            width="300"
+            class="flex-none object-cover w-full shadow-xl h-96 rounded-2xl aspect-square max-w-sm"
+            />
+          </div>
 					<div class="flex-auto w-full">
-						<h2 class="text-4xl font-bold tracking-tight text-white sm:text-4xl">
-							Join Our Rural Turnout Team
-						</h2>
-						<p class="mt-6 text-lg leading-8 text-gray-300">
-							We are recruiting organizers and volunteers across the country to turn out rural Democrats
-							in key swing states by learning and implementing tried-and-true voter turnout methods,
-							innovative digital strategies, and creative relational organizing approaches.
-						</p>
+            <h2 class="text-4xl font-bold tracking-tight text-white sm:text-4xl">
+              Join Our Rural Turnout Team
+            </h2>
+            <p class="my-6 text-lg leading-8 text-gray-300">
+              Are you ready to make a real impact in 2025? Blue Wave America is building power in rural communities, and we need dedicated volunteers like you to help turn out the vote and strengthen our democracy!
+            </p>
+            <!-- <h3 class="mt-3 text-xl text-gray-300">Why Volunteer?</h3>
+            <ul>
+              <li class="text-lg text-gray-300">✅ Be part of a grassroots movement fighting for real change.</li>
+              <li class="text-lg text-gray-300">✅ Help elect leaders who truly represent our communities.</li>
+              <li class="text-lg text-gray-300">✅ Gain hands-on experience in movement-based organizing.</li>
+              <li class="text-lg text-gray-300">✅ Build connections with like-minded activists and voters.</li>
+            </ul>
+            <h3 class="mt-3 text-xl text-gray-300">How You Can Help:</h3>
+            <ul>
+              <li class="text-lg text-gray-300">📞Phone Banking - Connect with voters to ensure they have the resources to cast their ballots.</li>
+              <li class="text-lg text-gray-300">🚪Canvassing - Engage directly with your community by knocking on doors and spreading our message.</li>
+              <li class="text-lg text-gray-300">📱Relational Organizing - Use your personal network to mobilize voters and amplify our efforts.</li>
+            </ul>
+
+            <h3 class="mt-3 text-xl text-gray-300">What We Provide:</h3>
+            <ul>
+              <li class="text-lg text-gray-300">🔹Training & Support - No experience needed! We'll provide all the tools and guidance you need to be effective.</li>
+              <li class="text-lg text-gray-300">🔹Cutting-Edge Organizing Tools - Gain access to voter files and digital outreach tools to maximize your impact.</li>
+              <li class="text-lg text-gray-300">🔹A Community of Change-Makers - Work alongside passionate individuals committed to making a difference.</li>
+            </ul> -->
 						<ul
-							class="grid grid-cols-1 text-lg leading-7 text-white gap-x-6 gap-y-3 sm:grid-cols-2"
+							class="grid grid-cols-1 text-lg leading-7 text-white gap-x-6 gap-y-3"
 							role="list"
 						>
 							{states.map((state) => <StateButton state={state} />)}
