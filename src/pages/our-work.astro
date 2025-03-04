@@ -8,63 +8,207 @@ const pastStates = [
 	{
 		name: "Michigan",
 		description: "",
-    counties: ["Alcona", "Alger", "Alpena", "Antrim", "Arenac", "Baraga", "Barry", "Cheboygan", "Chippewa", "Clare", "Crawford", "Delta", "Dickinson", "Gladwin", "Gratiot", "Huron", "Ionia", "Iosco", "Iron", "Kalkaska", "Lake", "Luce", "Mackinac", "Mason", "Mecosta", "Menominee", "Missaukee", "Montcalm", "Montmorency", "Newaygo", "Oceana", "Ogemaw", "Ontonagon", "Osceola", "Oscoda", "Otsego", "Presque Isle", "Roscommon", "Sanilac", "Schoolcraft", "Tuscola", "Wexford"],
-    img: "/graphics/MI-map.png",
-    htmlId: "michigan-select",
-    height: 700,
-    width: 700
+		counties: [
+			"Alcona",
+			"Alger",
+			"Alpena",
+			"Antrim",
+			"Arenac",
+			"Baraga",
+			"Barry",
+			"Cheboygan",
+			"Chippewa",
+			"Clare",
+			"Crawford",
+			"Delta",
+			"Dickinson",
+			"Gladwin",
+			"Gratiot",
+			"Huron",
+			"Ionia",
+			"Iosco",
+			"Iron",
+			"Kalkaska",
+			"Lake",
+			"Luce",
+			"Mackinac",
+			"Mason",
+			"Mecosta",
+			"Menominee",
+			"Missaukee",
+			"Montcalm",
+			"Montmorency",
+			"Newaygo",
+			"Oceana",
+			"Ogemaw",
+			"Ontonagon",
+			"Osceola",
+			"Oscoda",
+			"Otsego",
+			"Presque Isle",
+			"Roscommon",
+			"Sanilac",
+			"Schoolcraft",
+			"Tuscola",
+			"Wexford",
+		],
+		img: "/graphics/MI-map.png",
+		htmlId: "michigan-select",
+		height: 700,
+		width: 700,
 	},
 	{
 		name: "North Carolina",
 		description: "",
-    counties: ["Alexander", "Alleghany", "Ashe", "Avery", "Beaufort", "Burke", "Caldwell", "Camden", "Carteret", "Cherokee", "Chowan", "Clay", "Cleveland", "Craven", "Currituck", "Dare", "Davie", "Gates", "Graham", "Haywood", "Hyde", "Jackson", "Lincoln", "Macon", "Madison", "McDowell", "Mitchell", "Pamlico", "Pender", "Perquimans", "Polk", "Rockingham", "Rutherford", "Sampson", "Stokes", "Surry", "Swain", "Transylvania", "Tyrrell", "Wilkes", "Yadkin", "Yancey"],
-    img: "/graphics/NC-map.png",
-    htmlId: "north-carolina-select",
-    height: 900,
-    width: 900
+		counties: [
+			"Alexander",
+			"Alleghany",
+			"Ashe",
+			"Avery",
+			"Beaufort",
+			"Burke",
+			"Caldwell",
+			"Camden",
+			"Carteret",
+			"Cherokee",
+			"Chowan",
+			"Clay",
+			"Cleveland",
+			"Craven",
+			"Currituck",
+			"Dare",
+			"Davie",
+			"Gates",
+			"Graham",
+			"Haywood",
+			"Hyde",
+			"Jackson",
+			"Lincoln",
+			"Macon",
+			"Madison",
+			"McDowell",
+			"Mitchell",
+			"Pamlico",
+			"Pender",
+			"Perquimans",
+			"Polk",
+			"Rockingham",
+			"Rutherford",
+			"Sampson",
+			"Stokes",
+			"Surry",
+			"Swain",
+			"Transylvania",
+			"Tyrrell",
+			"Wilkes",
+			"Yadkin",
+			"Yancey",
+		],
+		img: "/graphics/NC-map.png",
+		htmlId: "north-carolina-select",
+		height: 900,
+		width: 900,
 	},
 	{
 		name: "Pennsylvania",
 		description: "",
-    counties: ["Armstrong", "Bedford", "Bradford", "Cameron", "Carbon", "Clarion", "Clearfield", "Clinton", "Columbia", "Crawford", "Elk", "Forest", "Fulton", "Greene", "Huntington", "Indiana", "Jefferson", "Juniata", "Lawrence", "McKean", "Mifflin", "Montour", "Perry", "Pike", "Potter", "Snyder", "Sommerset", "Sullivan", "Susquehanna", "Tioga", "Union", "Venango", "Warren", "Wayne", "Wyoming"],
-      img: "/graphics/PA-map.png",
-    htmlId: "pennsylvania-select",
-    height: 800,
-    width: 800
+		counties: [
+			"Armstrong",
+			"Bedford",
+			"Bradford",
+			"Cameron",
+			"Carbon",
+			"Clarion",
+			"Clearfield",
+			"Clinton",
+			"Columbia",
+			"Crawford",
+			"Elk",
+			"Forest",
+			"Fulton",
+			"Greene",
+			"Huntington",
+			"Indiana",
+			"Jefferson",
+			"Juniata",
+			"Lawrence",
+			"McKean",
+			"Mifflin",
+			"Montour",
+			"Perry",
+			"Pike",
+			"Potter",
+			"Snyder",
+			"Sommerset",
+			"Sullivan",
+			"Susquehanna",
+			"Tioga",
+			"Union",
+			"Venango",
+			"Warren",
+			"Wayne",
+			"Wyoming",
+		],
+		img: "/graphics/PA-map.png",
+		htmlId: "pennsylvania-select",
+		height: 800,
+		width: 800,
 	},
 	{
 		name: "Wisconsin",
 		description: "",
-    counties: ["Adams", "Barron", "Buffalo", "Burnett", "Chippewa", "Clark", "Columbia", "Crawford", "Dunn", "Florence", "Forest", "Grant", "Green", "Green Lake", "Iowa", "Iron", "Jackson", "Juneau", "Kewaunee", "Lafayette", "Langlade", "Linkcoln", "Manitowoc", "Marinette", "Menominee", "Monroe", "Oconto", " Oneida", "Pepin", "Pierce", "Polk", "Portage", "Price", "Richland", "Rusk", "Sauk", "Sawyer", "Taylor", "Trempealeau", "Vernon", "Vilas", "Washburn", "Waupaca", "Waushara"],
-    img: "/graphics/WI-map.png",
-    htmlId: "wisconsin-select",
-    height: 900,
-    width: 900
+		counties: [
+			"Adams",
+			"Barron",
+			"Buffalo",
+			"Burnett",
+			"Chippewa",
+			"Clark",
+			"Columbia",
+			"Crawford",
+			"Dunn",
+			"Florence",
+			"Forest",
+			"Grant",
+			"Green",
+			"Green Lake",
+			"Iowa",
+			"Iron",
+			"Jackson",
+			"Juneau",
+			"Kewaunee",
+			"Lafayette",
+			"Langlade",
+			"Linkcoln",
+			"Manitowoc",
+			"Marinette",
+			"Menominee",
+			"Monroe",
+			"Oconto",
+			" Oneida",
+			"Pepin",
+			"Pierce",
+			"Polk",
+			"Portage",
+			"Price",
+			"Richland",
+			"Rusk",
+			"Sauk",
+			"Sawyer",
+			"Taylor",
+			"Trempealeau",
+			"Vernon",
+			"Vilas",
+			"Washburn",
+			"Waupaca",
+			"Waushara",
+		],
+		img: "/graphics/WI-map.png",
+		htmlId: "wisconsin-select",
+		height: 900,
+		width: 900,
 	},
 ];
-
-const fightingForPoliticians = [
-  {
-    name: "Gay Valimont (D)",
-    position: "Florida 1st Congressional District",
-    img: "/people/gay-valimont.jpeg"
-  },
-  {
-    name: "Joshua Weil (D)",
-    position: "Florida 6th Congressional District",
-    img: "/people/joshua-weil.jpg"
-  },
-  {
-    name: "Blake Gendebien (D)",
-    position: "New York 21st Congressional District",
-    img: "/people/blake-gendebien.png"
-  },
-  {
-    name: "Unknown",
-    position: "Future Democratic Nominee for Virginia Governor",
-    img: "/people/user.png"
-  },
-  ];
 
 const ourWorkPoliticians = [
 	{
@@ -82,22 +226,22 @@ const ourWorkPoliticians = [
 		position: "Pennsylvania Governor",
 		img: "/people/josh-shapiro.jpg",
 	},
-  {
-    name: "Tammy Baldwin (D)",
+	{
+		name: "Tammy Baldwin (D)",
 		position: "Wisconsin Senate",
 		img: "/people/tammy-baldwin.png",
 	},
-  {
-    name: "Josh Stein (D)",
-    position: "North Carolina Governor",
-    img: "/people/josh-stein.png",
-  },
-  {
+	{
+		name: "Josh Stein (D)",
+		position: "North Carolina Governor",
+		img: "/people/josh-stein.png",
+	},
+	{
 		name: "Elissa Slotkin (D)",
 		position: "Michigan Senate",
 		img: "/people/elissa-slotkin.jpg",
 	},
-  {
+	{
 		name: "Jon Ossoff (D)",
 		position: "Georgia Senate",
 		img: "/people/jon-ossoff.jpg",
@@ -117,25 +261,11 @@ const ourWorkPoliticians = [
 		<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">Our Work</h1>
 	</section>
 	<section class="flex flex-col gap-8">
-    <div class="grid gap-8 grid-cols-3 py-6 px-6 mx-auto max-w-5xl">
-			<div class="space-y-6">
-				<h2 class="text-3xl font-extrabold tracking-tight text-gray-800">We're Fighting to Elect</h2>
-				<p class="text-lg text-gray-500">
-					Democrats that will fight for Democracy.
-				</p>
-			</div>
-			<div class="col-span-2 mt-6 px-3">
-				<ul class="grid grid-cols-1 gap-12 md:grid-cols-2" role="list">
-					{fightingForPoliticians.map((politician) => <Profile politician={politician} />)}
-				</ul>
-			</div>
-		</div>
 		<div class="grid gap-8 grid-cols-3 py-8 px-6 mx-auto max-w-5xl">
 			<div class="space-y-6">
 				<h2 class="text-3xl font-extrabold tracking-tight text-gray-800">Our Work</h2>
 				<p class="text-lg text-gray-500">
-					We fought hard in 2022 and 2024 and we'll keep
-					fighting for Democracy <strong>Every Day</strong>.
+					We fought hard in 2022 and 2024 and we'll keep fighting for Democracy <strong>Every Day</strong>.
 				</p>
 			</div>
 			<div class="col-span-2 mt-6">
@@ -146,22 +276,26 @@ const ourWorkPoliticians = [
 		</div>
 	</section>
 	<section class="flex flex-col gap-8">
-    <h2 class="text-4xl mx-auto font-extrabold text-gray-800">States We've Worked In</h2>
-    <section class="flex flex-col gap-8">
-      {
-        pastStates.map((state) => (
-          <div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
-            <h2 class="text-3xl font-extrabold text-gray-800">{state.name}</h2>
-            <div class="ml-5 mt-3 text-lg">{state.description}</div>
-            <div>
-              <label for={state.htmlId}>Select a county: </label>
-              <select name={state.htmlId} id={state.htmlId} class='ml-10 text-lg mt-3 p-1 rounded border-2 border-black'>
-                {state.counties.map(county => (
-                  <option>{county}</option>
-                ))}
-              </select>
-            </div>
-            {/* <div>
+		<h2 class="text-4xl mx-auto font-extrabold text-gray-800">States We've Worked In</h2>
+		<section class="flex flex-col gap-8">
+			{
+				pastStates.map((state) => (
+					<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
+						<h2 class="text-3xl font-extrabold text-gray-800">{state.name}</h2>
+						<div class="ml-5 mt-3 text-lg">{state.description}</div>
+						<div>
+							<label for={state.htmlId}>Select a county: </label>
+							<select
+								name={state.htmlId}
+								id={state.htmlId}
+								class="ml-10 text-lg mt-3 p-1 rounded border-2 border-black"
+							>
+								{state.counties.map((county) => (
+									<option>{county}</option>
+								))}
+							</select>
+						</div>
+						{/* <div>
               <h3 class="my-2 text-2xl font-extrabold text-gray-800">Counties</h3>
               <ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                 {state.counties.map(county => (
@@ -169,11 +303,17 @@ const ourWorkPoliticians = [
                 ))}
               </ul>
             </div> */}
-            <Image src={state.img} alt="State Map" height={state.height} width={state.width} class="my-6 self-center"/>
-          </div>
-        ))
-      }
-    </section>
+						<Image
+							src={state.img}
+							alt="State Map"
+							height={state.height}
+							width={state.width}
+							class="my-6 self-center"
+						/>
+					</div>
+				))
+			}
+		</section>
 	</section>
 </main>
 <Footer />

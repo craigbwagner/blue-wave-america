@@ -4,11 +4,35 @@ import Footer from "../components/Footer.astro";
 import StateButton from "../components/StateButton.astro";
 import Image from "astro/components/Image.astro";
 import Carousel from "../components/Carousel";
+import Profile from "../components/Profile.astro";
 
 const states = [
 	{
 		name: "Virginia",
 		link: "https://www.mobilize.us/bluewavevirginia/event/755289/?referring_vol=6223049&rname=Oscar&share_context=event_details&share_medium=copy_link ",
+	},
+];
+
+const fightingForPoliticians = [
+	{
+		name: "Gay Valimont (D)",
+		position: "Florida 1st Congressional District",
+		img: "/people/gay-valimont.jpeg",
+	},
+	{
+		name: "Joshua Weil (D)",
+		position: "Florida 6th Congressional District",
+		img: "/people/joshua-weil.jpg",
+	},
+	{
+		name: "Blake Gendebien (D)",
+		position: "New York 21st Congressional District",
+		img: "/people/blake-gendebien.png",
+	},
+	{
+		name: "Unknown",
+		position: "Future Democratic Nominee for Virginia Governor",
+		img: "/people/user.png",
 	},
 ];
 ---
@@ -88,6 +112,18 @@ const states = [
 				href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
 				target="_blank">Donate Now to Blue Wave America</a
 			>
+		</div>
+
+		<div class="grid gap-8 grid-cols-3 py-6 px-6 mx-auto max-w-5xl">
+			<div class="space-y-6">
+				<h2 class="text-3xl font-extrabold tracking-tight text-gray-800">We're Fighting to Elect</h2>
+				<p class="text-lg text-gray-500">Democrats that will fight for Democracy.</p>
+			</div>
+			<div class="col-span-2 mt-6 px-3">
+				<ul class="grid grid-cols-1 gap-12 md:grid-cols-2" role="list">
+					{fightingForPoliticians.map((politician) => <Profile politician={politician} />)}
+				</ul>
+			</div>
 		</div>
 
 		<div class="flex justify-center relative isolate mx-auto bg-gray-900">
