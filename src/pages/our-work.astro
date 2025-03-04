@@ -155,7 +155,7 @@ const ourWorkPoliticians = [
             <div class="ml-5 mt-3 text-lg">{state.description}</div>
             <div>
               <label for={state.htmlId}>Select a county: </label>
-              <select name={state.htmlId} id={state.htmlId} class='ml-10 rounded border-2 border-black'>
+              <select name={state.htmlId} id={state.htmlId} class='ml-10 text-lg mt-3 p-1 rounded border-2 border-black'>
                 {state.counties.map(county => (
                   <option>{county}</option>
                 ))}
