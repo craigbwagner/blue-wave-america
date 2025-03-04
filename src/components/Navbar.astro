@@ -62,48 +62,64 @@ import Image from "astro/components/Image.astro";
 					<div class="flex justify-between items-center md:w-screen max-w-screen-lg">
 						<a
 							class="text-gray-200 text-lg font-medium bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl"
-							href="/work-with-us">
-              Volunteer</a
+							href="https://www.mobilize.us/bluewavevirginia/event/755289/?referring_vol=6223049&rname=Oscar&share_context=event_details&share_medium=copy_link"
+						>
+							Volunteer</a
 						>
 						<a
 							href="/"
 							class="text-gray-200 text-lg font-medium transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md text-med lg:text-xl"
 							>Home</a
 						>
-            <a
-            href="/who-we-are"
-            class="text-gray-200 text-lg font-medium transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
-            >Who We Are</a
-            >
 						<a
-            href="/states"
-            class="text-gray-200 text-lg font-medium  transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md text-med lg:text-xl"
-            >States</a
+							href="/who-we-are"
+							class="text-gray-200 text-lg font-medium transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
+							>Who We Are</a
 						>
-            <a
-              href="/our-work"
-              class="text-gray-200 text-lg font-medium transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
-              >Our Work</a
-            >
+						<a
+							href="/states"
+							class="text-gray-200 text-lg font-medium transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md text-med lg:text-xl"
+							>States</a
+						>
+						<a
+							href="/our-work"
+							class="text-gray-200 text-lg font-medium transition duration-500 hover:text-sky-500 px-3 py-1 rounded-md lg:text-xl"
+							>Our Work</a
+						>
 						<div class="flex justify-between gap-4 items-center">
-              <a href="https://www.facebook.com/BlueWaveAmerica" target="_blank">
-								<Image src="/social-media-icons/facebook-icon.svg" alt="Facebook icon" height="32" width="32" />
+							<a href="https://www.facebook.com/BlueWaveAmerica" target="_blank">
+								<Image
+									src="/social-media-icons/facebook-icon.svg"
+									alt="Facebook icon"
+									height="32"
+									width="32"
+								/>
 							</a>
 							<a href="https://www.instagram.com/bluewaveamerica/" target="_blank">
-								<Image src="/social-media-icons/instagram-icon.svg" alt="Instagram icon" height="31" width="31" />
+								<Image
+									src="/social-media-icons/instagram-icon.svg"
+									alt="Instagram icon"
+									height="31"
+									width="31"
+								/>
 							</a>
 							<a href="https://bsky.app/profile/bluewaveamerica.bsky.social" target="_blank">
-								<Image src="/social-media-icons/bluesky-icon.png" alt="Bluesky icon" height="31" width="31" />
+								<Image
+									src="/social-media-icons/bluesky-icon.png"
+									alt="Bluesky icon"
+									height="31"
+									width="31"
+								/>
 							</a>
-              <a href="https://x.com/BlueWaveAm" target="_blank">
-                <Image src="/social-media-icons/x-logo.png" alt="X icon" height="36" width="36" />
-              </a>
+							<a href="https://x.com/BlueWaveAm" target="_blank">
+								<Image src="/social-media-icons/x-logo.png" alt="X icon" height="36" width="36" />
+							</a>
 						</div>
-            <a
-              class="text-gray-200 w-38 text-lg font-medium text-center bg-sky-600 transition duration-500 hover:bg-sky-500 px-5 py-1.5 rounded-md md:py-2 lg:text-xl"
-              href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
-              target="_blank">Donate</a
-            >
+						<a
+							class="text-gray-200 w-38 text-lg font-medium text-center bg-sky-600 transition duration-500 hover:bg-sky-500 px-5 py-1.5 rounded-md md:py-2 lg:text-xl"
+							href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
+							target="_blank">Donate</a
+						>
 					</div>
 				</div>
 			</div>
@@ -112,43 +128,43 @@ import Image from "astro/components/Image.astro";
 
 	<!-- Mobile menu, show/hide based on menu state. -->
 	<div class="sm:hidden" id="mobile-menu">
-    <button
-      type="button"
-      class="text-gray-700 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-1.5 rounded-md text-base font-medium"
-      id="mobile-dropdown-button"
-    >
-		<div class="px-2 py-1 hidden" id="mobile-menu-links">
-			<a
-				href="/"
-				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
-				>Home</a
-			>
-      <a
-        href="/who-we-are"
-        class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
-        >Who We Are</a
-      >
-			<a
-				href="/states"
-				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
-				>States</a
-			>
-			<a
-				href="/our-work"
-				class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
-				>Our Work</a
-			>
+		<button
+			type="button"
+			class="text-gray-700 hover:bg-gray-700 hover:text-white block w-full text-left px-3 py-1.5 rounded-md text-base font-medium"
+			id="mobile-dropdown-button"
+		>
+			<div class="px-2 py-1 hidden" id="mobile-menu-links">
+				<a
+					href="/"
+					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+					>Home</a
+				>
+				<a
+					href="/who-we-are"
+					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+					>Who We Are</a
+				>
+				<a
+					href="/states"
+					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+					>States</a
+				>
+				<a
+					href="/our-work"
+					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
+					>Our Work</a
+				>
 				<a
 					href="https://secure.actblue.com/donate/blue-wave-america-frontpage"
 					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
 					target="_blank">Donate</a
 				>
 				<a
-					href="/work-with-us"
+					href="https://www.mobilize.us/bluewavevirginia/event/755289/?referring_vol=6223049&rname=Oscar&share_context=event_details&share_medium=copy_link"
 					class="text-gray-700 hover:bg-gray-700 hover:text-white block px-3 py-1.5 rounded-md text-base font-medium"
 					target="_blank">Volunteer</a
 				>
 			</div>
-		</div>
+		</button>
 	</div>
 </nav>
