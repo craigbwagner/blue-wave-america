@@ -4,23 +4,23 @@ import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
 
 const volunteerLinks = [
-  {
-    name: "Michigan",
-    url: "https://www.mobilize.us/bluewaveamericamichigan/"
-  },
-  {
-    name: "North Carolina",
-    url: "https://www.mobilize.us/bluewaveamericanorthcarolina/"
-  },
-  {
-    name: "Pennsylvania",
-    url: "https://www.mobilize.us/bluewaveamericapennsylvania/"
-  },
-  {
-    name: "Wisconsin",
-    url: "https://www.mobilize.us/bluewaveamericawisconsin/"
-  }
-]
+	{
+		name: "Michigan",
+		url: "https://www.mobilize.us/bluewaveamericamichigan/",
+	},
+	{
+		name: "North Carolina",
+		url: "https://www.mobilize.us/bluewaveamericanorthcarolina/",
+	},
+	{
+		name: "Pennsylvania",
+		url: "https://www.mobilize.us/bluewaveamericapennsylvania/",
+	},
+	{
+		name: "Wisconsin",
+		url: "https://www.mobilize.us/bluewaveamericawisconsin/",
+	},
+];
 ---
 
 <head>
@@ -32,29 +32,42 @@ const volunteerLinks = [
 <Header />
 <main>
 	<section class="mx-auto max-w-4xl px-6 my-8">
-		<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">Getting Involved with Blue Wave</h1>
+		<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">
+			Getting Involved with Blue Wave
+		</h1>
 	</section>
 	<section class="flex flex-col mx-auto max-w-4xl mb-8 gap-4">
-    <h2 class="text-4xl font-extrabold text-gray-800">Volunteering</h2>
-    <p class="text-lg">Join Blue Wave America in organizing rural voters to protect Democracy in the 2024 Election and beyond!</p>
-    <p class=" text-lg">Volunteer Opportunities Include:</p>
-    <ul class="list-inside list-disc text-lg">
-      <li>Calling Voters from the comfort of your home!</li>
-      <li>Connecting with folks you already know about the election through Relational Organizing!</li>
-      <li>Knocking on the doors of your neighbors to get them out to vote!</li>
-    </ul>
-    <p class="mt-2 text-2xl font-bold">Volunteer In:</p>
-    <div class="grid grid-cols-2 w-1/2 my-6 gap-4 self-center justify-items-center">
-      {volunteerLinks.map(state => (
-        <a href={state.url} target="_blank" class="w-48 text-gray-200 text-center text-lg font-medium bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl">{state.name}</a>
-      ))}
-    </div>
-    <Image src="/graphics/volunteer-with-us-image.png" alt="Stock Image" height={1000} width={800} class="self-center"/>
+		<h2 class="text-4xl font-extrabold text-gray-800">Volunteering</h2>
+		<p class="text-lg">
+			Join Blue Wave America in organizing rural voters to protect Democracy in the 2024 Election and beyond!
+		</p>
+		<p class="text-lg">Volunteer Opportunities Include:</p>
+		<ul class="list-inside list-disc text-lg">
+			<li>Calling Voters from the comfort of your home!</li>
+			<li>Connecting with folks you already know about the election through Relational Organizing!</li>
+			<li>Knocking on the doors of your neighbors to get them out to vote!</li>
+		</ul>
+		<p class="mt-2 text-2xl font-bold">Volunteer In:</p>
+		<div class="grid grid-cols-2 w-1/2 my-6 gap-4 self-center justify-items-center">
+			{
+				volunteerLinks.map((state) => (
+					<a
+						href={state.url}
+						target="_blank"
+						class="w-48 text-gray-200 text-center text-lg font-medium bg-sky-600 transition duration-500 hover:bg-sky-500 px-4 py-1.5 rounded-md md:py-2 lg:text-xl"
+					>
+						{state.name}
+					</a>
+				))
+			}
+		</div>
+		<Image
+			src="/graphics/volunteer-with-us-image.png"
+			alt="Stock Image"
+			height={1000}
+			width={800}
+			class="self-center"
+		/>
 	</section>
-	<!-- <section class="flex flex-col mx-auto gap-8">
-    <h2 class="text-4xl font-extrabold text-gray-800">Careers</h2>
-    <p class="ml-5 text-lg">We are funding and training the next generation of Democratic political organizers in key swing states on rural voter outreach methods, Democratic turnout software, and digital organizing strategies. Our expert team uses decades of campaign experience to get out the vote where Democrats have given too much ground to Republicans for far too long.</p>
-    <a href="https://app.joinhandshake.com/emp/employers/872290" class="text-lg text-sky-600 hover:text-sky-400">Careers Page</a>
-	</section> -->
 </main>
 <Footer />
