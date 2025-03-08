@@ -7,25 +7,62 @@ const states = [
 	{
 		name: "Virginia",
 		description: "",
-    counties: ["1 - Allegheny", "2 - Amelia", "3 - Amherst", "4 - Appomattox", "5 - Augusta", "6 - Bath", "7 - Bedford", "8 - Botetourt", "9 - Buckingham", "10 - Buena Vista", "11 - Campbell", "12 - Carroll", "13 - Charlotte", "14 - Craig", "15 - Cumberland", "16 - Floyd", "17 - Fluvanna", "18 - Franklin", "19 - Galax", "20 - Goochland", "21 - Halifax", "22 - Henry", "23 - Louisa", "24 - Lunenburg", "25 - Lynchburg", "26 - Mecklenburg", "27 - Nelson", "28 - Nottoway", "29 - Patrick", "30 - Pittsylvania", "31 - Powhatan", "32 - Prince Edward", "33 - Roanoke", "34 - Rockbridge", "35 - Salem", "36 - Waynesboro"],
-    img: "/graphics/VA-map.png",
-    htmlId: "virginia-select",
-    height: 700,
-    width: 700,
-    jobOpenings: [
-      {
-        title: "Southside Region Field Organizer",
-        link: "https://bluewaveamerica.bamboohr.com/careers/25?source=aWQ9MjE%3D"
-      },
-      {
-        title: "Central Region Field Organizer",
-        link: "https://bluewaveamerica.bamboohr.com/careers/24?source=aWQ9MjE%3D"
-      },
-      {
-        title: "Valley Region Field Organizer",
-        link: "https://bluewaveamerica.bamboohr.com/careers/23?source=aWQ9MjE%3D"
-      }
-    ]
+		counties: [
+			"1 - Allegheny",
+			"2 - Amelia",
+			"3 - Amherst",
+			"4 - Appomattox",
+			"5 - Augusta",
+			"6 - Bath",
+			"7 - Bedford",
+			"8 - Botetourt",
+			"9 - Buckingham",
+			"10 - Buena Vista",
+			"11 - Campbell",
+			"12 - Carroll",
+			"13 - Charlotte",
+			"14 - Craig",
+			"15 - Cumberland",
+			"16 - Floyd",
+			"17 - Fluvanna",
+			"18 - Franklin",
+			"19 - Galax",
+			"20 - Goochland",
+			"21 - Halifax",
+			"22 - Henry",
+			"23 - Louisa",
+			"24 - Lunenburg",
+			"25 - Lynchburg",
+			"26 - Mecklenburg",
+			"27 - Nelson",
+			"28 - Nottoway",
+			"29 - Patrick",
+			"30 - Pittsylvania",
+			"31 - Powhatan",
+			"32 - Prince Edward",
+			"33 - Roanoke",
+			"34 - Rockbridge",
+			"35 - Salem",
+			"36 - Waynesboro",
+		],
+		img: "/graphics/VA-map.png",
+		htmlId: "virginia-select",
+		height: 700,
+		width: 700,
+		jobOpenings: [
+			{
+				title: "Southside Region Field Organizer",
+				link: "https://bluewaveamerica.bamboohr.com/careers/25?source=aWQ9MjE%3D",
+			},
+			{
+				title: "Central Region Field Organizer",
+				link: "https://bluewaveamerica.bamboohr.com/careers/24?source=aWQ9MjE%3D",
+			},
+			{
+				title: "Valley Region Field Organizer",
+				link: "https://bluewaveamerica.bamboohr.com/careers/23?source=aWQ9MjE%3D",
+			},
+		],
 	},
 ];
 ---
@@ -38,42 +75,47 @@ const states = [
 </head>
 <Header />
 <main class="flexml-5 my-10">
-		<h1 class="text-4xl text-center mb-6 font-extrabold tracking-tight text-sky-600 md:text-5xl">States We're In</h1>
+	<h1 class="text-4xl text-center mb-6 font-extrabold tracking-tight text-sky-600 md:text-5xl">States We're In</h1>
 	<section class="flex flex-col gap-8">
-    {states.map((state) => (
-        <div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
-          <h2 class="text-4xl font-extrabold text-gray-800">{state.name}</h2>
-          <div>
-            <h3 class="mt-4 text-3xl text-left mx-auto font-extrabold text-gray-800">{state.name} Job Openings: </h3>
-            <ul class="grid grid-cols-3 mt-3 gap-4">
-              {state.jobOpenings.map(job => (
-                <a
-                  class="flex items-center justify-center max-w-54 px-2 py-3 text-lg text-white rounded-md bg-sky-600 hover:bg-sky-500"
-                  href={job.link}
-                  target="_blank">{job.title}</a>
-              ))}
-            </ul>
-          </div>
-          <div class="ml-5 mt-3 text-lg">{state.description}</div>
-          <div>
-            <label for={state.htmlId}>Select a county: </label>
-            <select name={state.htmlId} id={state.htmlId} class='ml-10 text-lg mt-3 p-1 rounded border-2 border-black'>
-              {state.counties.map(county => (
-                <option>{county}</option>
-              ))}
-            </select>
-          </div>
-          {/* <div>
-            <h3 class="my-2 text-2xl font-extrabold text-gray-800">Counties</h3>
-            <ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-              {state.counties.map(county => (
-                <li>{county}</li>
-              ))}
-            </ul>
-          </div> */}
-          <Image src={state.img} alt="State Map" height={state.height} width={state.width} class="my-6 self-center"/>
-        </div>
-      ))}
+		{
+			states.map((state) => (
+				<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
+					<h2 class="text-4xl font-extrabold text-gray-800">{state.name}</h2>
+					<div>
+						<h3 class="mt-4 text-3xl text-left mx-auto font-extrabold text-gray-800">
+							{state.name} Job Openings:{" "}
+						</h3>
+						<ul class="grid grid-cols-3 mt-3 gap-4">
+							{state.jobOpenings.map((job) => (
+								<a
+									class="flex items-center justify-center max-w-54 px-2 py-3 text-lg text-white rounded-md bg-sky-600 hover:bg-sky-500"
+									href={job.link}
+									target="_blank"
+								>
+									{job.title}
+								</a>
+							))}
+						</ul>
+					</div>
+					<div class="ml-5 mt-3 text-lg">{state.description}</div>
+					<div>
+						<h3 class="my-2 text-2xl font-extrabold text-gray-800">Counties</h3>
+						<ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+							{state.counties.map((county) => (
+								<li>{county}</li>
+							))}
+						</ul>
+					</div>
+					<Image
+						src={state.img}
+						alt="State Map"
+						height={state.height}
+						width={state.width}
+						class="my-6 self-center"
+					/>
+				</div>
+			))
+		}
 	</section>
 </main>
 <Footer />
