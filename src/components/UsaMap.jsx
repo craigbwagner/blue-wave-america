@@ -14,27 +14,35 @@ export default function UsaMap() {
         {({ geographies }) =>
           geographies.map((geo) => {
             const stateName = geo.properties.name;
+            let stateUrl = "#";
             const fillColor = highlightedStates[stateName] || "#D6D6DA";
+
+            if (stateName in highlightedStates) {
+              stateUrl = `/states/#${stateName}`;
+            }
+
             return (
-              <Geography
-                key={geo.rsmKey}
-                geography={geo}
-                onClick={() => alert(`Clicked on ${stateName}`)}
-                style={{
-                  default: {
-                    fill: fillColor,
-                    outline: "none",
-                  },
-                  hover: {
-                    fill: "#87878a",
-                    outline: "none",
-                  },
-                  pressed: {
-                    fill: "#87878a",
-                    outline: "none",
-                  },
-                }}
-              />
+              <a href={stateUrl}>
+                <Geography
+                  key={geo.rsmKey}
+                  geography={geo}
+                  onClick={() => alert(`Clicked on ${stateName}`)}
+                  style={{
+                    default: {
+                      fill: fillColor,
+                      outline: "none",
+                    },
+                    hover: {
+                      fill: "#87878a",
+                      outline: "none",
+                    },
+                    pressed: {
+                      fill: "#87878a",
+                      outline: "none",
+                    },
+                  }}
+                />
+              </a>
             );
           })
         }

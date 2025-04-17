@@ -79,7 +79,7 @@ const states = [
 	<section class="flex flex-col gap-8">
 		{
 			states.map((state) => (
-				<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
+				<div class="flex flex-col px-6 mx-auto max-w-5xl text-center" id={state.name}>
 					<h2 class="text-4xl font-extrabold text-gray-800">{state.name}</h2>
 					<div>
 						<h3 class="mt-4 text-3xl text-left mx-auto font-extrabold text-gray-800">
