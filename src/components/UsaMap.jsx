@@ -22,7 +22,7 @@ export default function UsaMap() {
             geographies.map((geo) => {
               const stateName = geo.properties.name;
               let stateUrl = "#";
-              const fillColor = highlightedStates[stateName] || "#D6D6DA";
+              const fillColor = highlightedStates[stateName] || "#6B7280";
 
               if (stateName in highlightedStates) {
                 stateUrl = `/states/#${stateName}`;
