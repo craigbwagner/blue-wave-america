@@ -7,7 +7,6 @@ import Profile from "../components/Profile.astro";
 const pastStates = [
 	{
 		name: "Michigan",
-		description: "",
 		counties: [
 			"Alcona",
 			"Alger",
@@ -59,7 +58,6 @@ const pastStates = [
 	},
 	{
 		name: "North Carolina",
-		description: "",
 		counties: [
 			"Alexander",
 			"Alleghany",
@@ -111,7 +109,6 @@ const pastStates = [
 	},
 	{
 		name: "Pennsylvania",
-		description: "",
 		counties: [
 			"Armstrong",
 			"Bedford",
@@ -156,7 +153,6 @@ const pastStates = [
 	},
 	{
 		name: "Wisconsin",
-		description: "",
 		counties: [
 			"Adams",
 			"Barron",
@@ -282,10 +278,9 @@ const ourWorkPoliticians = [
 				pastStates.map((state) => (
 					<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
 						<h2 class="text-3xl font-extrabold text-gray-800">{state.name}</h2>
-						<div class="ml-5 mt-3 text-lg">{state.description}</div>
 						<div>
-							<h3 class="my-2 text-2xl font-extrabold text-gray-800">Counties</h3>
-							<ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+							<h3 class="my-6 text-2xl font-extrabold text-gray-800">Counties</h3>
+							<ul class="grid grid-cols-3 pt-2 mt-2 md:grid-cols-4 lg:grid-cols-5">
 								{state.counties.map((county) => (
 									<li>{county}</li>
 								))}
@@ -296,7 +291,7 @@ const ourWorkPoliticians = [
 							alt="State Map"
 							height={state.height}
 							width={state.width}
-							class="my-6 self-center"
+							class="my-8 self-center"
 						/>
 					</div>
 				))
