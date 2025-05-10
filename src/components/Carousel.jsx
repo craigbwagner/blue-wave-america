@@ -21,7 +21,7 @@ export default function Carousel() {
       slidesPerView={1}
       centeredSlides={true}
       modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
-      className='h-[600px] max-w-4xl'
+      className='h-[600px] max-w-4xl my-6'
     >
       <SwiperSlide>
         <img src='/graphics/carousel2.jpg' />
