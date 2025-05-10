@@ -82,7 +82,7 @@ const states = [
 				<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
 					<h2 class="text-4xl font-extrabold text-gray-800">{state.name}</h2>
 					<div>
-						<h3 class="mt-4 text-3xl text-left mx-auto font-extrabold text-gray-800">
+						<h3 class="my-8 text-3xl text-left mx-auto font-extrabold text-gray-800">
 							{state.name} Job Openings:{" "}
 						</h3>
 						<ul class="grid grid-cols-3 mt-3 gap-4">
@@ -97,9 +97,9 @@ const states = [
 							))}
 						</ul>
 					</div>
-					<div class="ml-5 mt-3 text-lg">{state.description}</div>
+					<div class="ml-5 mt-2 text-lg">{state.description}</div>
 					<div>
-						<h3 class="my-2 text-2xl font-extrabold text-gray-800">Counties</h3>
+						<h3 class="my-6 text-2xl font-extrabold text-gray-800">Counties</h3>
 						<ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
 							{state.counties.map((county) => (
 								<li>{county}</li>
