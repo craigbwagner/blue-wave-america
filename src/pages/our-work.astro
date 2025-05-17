@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
 import Profile from "../components/Profile.astro";
+import { ClientRouter } from "astro:transitions";
 
 const pastStates = [
 	{
@@ -250,35 +251,51 @@ const ourWorkPoliticians = [
 	<meta name="viewport" content="width=device-width" />
 	<title>Blue Wave America</title>
 	<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
+	<ClientRouter />
 </head>
 <Header />
 <main class="ml-5 my-10">
 	<section>
-		<h1 class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl">Our Work</h1>
+		<h1
+			class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl"
+		>
+			Our Work
+		</h1>
 	</section>
 	<section class="flex flex-col gap-8">
 		<div class="grid gap-8 grid-cols-3 py-8 px-6 mx-auto max-w-5xl">
 			<div class="space-y-6">
 				<p class="text-lg text-gray-500">
-					We fought hard in 2022 and 2024 and we'll keep fighting for Democracy <strong>Every Day</strong>.
+					We fought hard in 2022 and 2024 and we'll keep fighting for
+					Democracy <strong>Every Day</strong>.
 				</p>
 			</div>
 			<div class="col-span-2 mt-6">
 				<ul class="grid grid-cols-1 gap-8 md:grid-cols-2" role="list">
-					{ourWorkPoliticians.map((politician) => <Profile politician={politician} />)}
+					{
+						ourWorkPoliticians.map((politician) => (
+							<Profile politician={politician} />
+						))
+					}
 				</ul>
 			</div>
 		</div>
 	</section>
 	<section class="flex flex-col mt-4 gap-8">
-		<h2 class="text-4xl mx-auto font-extrabold text-sky-600">States We've Worked In</h2>
+		<h2 class="text-4xl mx-auto font-extrabold text-sky-600">
+			States We've Worked In
+		</h2>
 		<section class="flex flex-col gap-8">
 			{
 				pastStates.map((state) => (
 					<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
-						<h2 class="text-3xl font-extrabold text-gray-800">{state.name}</h2>
+						<h2 class="text-3xl font-extrabold text-gray-800">
+							{state.name}
+						</h2>
 						<div>
-							<h3 class="my-6 text-2xl font-extrabold text-gray-800">Counties</h3>
+							<h3 class="my-6 text-2xl font-extrabold text-gray-800">
+								Counties
+							</h3>
 							<ul class="grid grid-cols-3 pt-2 mt-2 md:grid-cols-4 lg:grid-cols-5">
 								{state.counties.map((county) => (
 									<li>{county}</li>
