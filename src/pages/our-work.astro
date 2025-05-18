@@ -52,7 +52,7 @@ const pastStates = [
 			"Tuscola",
 			"Wexford",
 		],
-		img: "/graphics/MI-map.png",
+		img: import("../images/graphics/MI-map.webp"),
 		htmlId: "michigan-select",
 		height: 700,
 		width: 700,
@@ -103,7 +103,7 @@ const pastStates = [
 			"Yadkin",
 			"Yancey",
 		],
-		img: "/graphics/NC-map.png",
+		img: import("../images/graphics/NC-map.webp"),
 		htmlId: "north-carolina-select",
 		height: 900,
 		width: 900,
@@ -147,7 +147,7 @@ const pastStates = [
 			"Wayne",
 			"Wyoming",
 		],
-		img: "/graphics/PA-map.png",
+		img: import("../images/graphics/PA-map.webp"),
 		htmlId: "pennsylvania-select",
 		height: 800,
 		width: 800,
@@ -200,7 +200,7 @@ const pastStates = [
 			"Waupaca",
 			"Waushara",
 		],
-		img: "/graphics/WI-map.png",
+		img: import("../images/graphics/WI-map.webp"),
 		htmlId: "wisconsin-select",
 		height: 900,
 		width: 900,
@@ -211,37 +211,44 @@ const ourWorkPoliticians = [
 	{
 		name: "Raphael Warnock (D)",
 		position: "Georgia Senate",
-		img: "/people/raphael-warnock.jpg",
+		img: "../images/people/raphael-warnock.webp",
+    loading: "eager"
 	},
 	{
 		name: "John Fetterman (D)",
 		position: "Pennsylvania Senate (red to blue)",
-		img: "/people/john-fetterman.jpg",
+		img: "../images/people/john-fetterman.webp",
+    loading: "eager"
 	},
 	{
 		name: "Josh Shapiro (D)",
 		position: "Pennsylvania Governor",
-		img: "/people/josh-shapiro.jpg",
+		img: "../images/people/josh-shapiro.webp",
+    loading: "eager"
 	},
 	{
 		name: "Tammy Baldwin (D)",
 		position: "Wisconsin Senate",
-		img: "/people/tammy-baldwin.png",
+		img: "../images/people/tammy-baldwin.webp",
+    loading: "eager"
 	},
 	{
 		name: "Josh Stein (D)",
 		position: "North Carolina Governor",
-		img: "/people/josh-stein.png",
+		img: "../images/people/josh-stein.webp",
+    loading: "eager"
 	},
 	{
 		name: "Elissa Slotkin (D)",
 		position: "Michigan Senate",
-		img: "/people/elissa-slotkin.jpg",
+		img: "../images/people/elissa-slotkin.webp",
+    loading: "eager"
 	},
 	{
 		name: "Jon Ossoff (D)",
 		position: "Georgia Senate",
-		img: "/people/jon-ossoff.jpg",
+		img: "../images/people/jon-ossoff.webp",
+    loading: "eager"
 	},
 ];
 ---
@@ -308,6 +315,7 @@ const ourWorkPoliticians = [
 							height={state.height}
 							width={state.width}
 							class="my-8 self-center"
+              loading="lazy"
 						/>
 					</div>
 				))

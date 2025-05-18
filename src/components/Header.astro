@@ -5,11 +5,12 @@ import Image from "astro/components/Image.astro";
 
 <a href="/" class="flex flex-col text-center my-4 pb-4">
 	<Image
-					src="/graphics/logo.png"
-					alt="Blue wave america logo"
-					width="900"
-					height="150"
-					class="mx-auto"
-				/>
+		src={import("../images/graphics/logo.webp")}
+		alt="Blue wave america logo"
+		width="900"
+		height="150"
+		class="mx-auto"
+		loading="eager"
+	/>
 </a>
 <Navbar />

@@ -19,6 +19,7 @@ const fightingForPoliticians = [
 		name: "Unknown",
 		position: "Future Democratic Nominee for Virginia Governor",
 		img: "/people/user.png",
+    loading: "lazy"
 	},
 ];
 ---
@@ -28,7 +29,7 @@ const fightingForPoliticians = [
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>Blue Wave America</title>
-		<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
+		<link rel="icon" type="image/x-icon" href="/favicon.webp" />
 		<script
 			defer
 			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
@@ -63,7 +64,7 @@ const fightingForPoliticians = [
 				Democrats have given too much ground to Republicans for far too
 				long.
 			</p>
-			<Carousel client:load />
+			<Carousel client:load/>
 		</div>
 		<div class="mx-auto max-w-4xl py-2 px-6">
 			<h2 class="text-4xl font-extrabold text-gray-800">
@@ -79,7 +80,7 @@ const fightingForPoliticians = [
 			</p>
 			<div class="my-6">
 				<Image
-					src="/graphics/musk-trump.png"
+					src={import("../images/graphics/musk-trump.webp")}
 					alt="Elon Musk and Donald Trump"
 					width="900"
 					height="150"

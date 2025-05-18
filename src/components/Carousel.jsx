@@ -6,6 +6,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import "swiper/css/effect-coverflow";
 
+
+const carouselImages = [
+  { src: "/src/images/graphics/carousel1.webp", alt: ""},
+  { src: "/src/images/graphics/carousel2.webp", alt: ""},
+  { src: "/src/images/graphics/carousel3.webp", alt: ""}
+];
+
 export default function Carousel() {
   return (
     <Swiper
@@ -23,15 +30,15 @@ export default function Carousel() {
       modules={[Autoplay, Pagination, Navigation, EffectCoverflow]}
       className='h-[600px] max-w-4xl my-6'
     >
-      <SwiperSlide className="flex flex-col h-[500px] justify-around content-evenly">
-        <img src='/graphics/carousel1.jpeg' />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src='/graphics/carousel3.jpeg' />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src='/graphics/carousel4.jpeg' />
-      </SwiperSlide>
+      {carouselImages.map((image) => (
+        <SwiperSlide>
+          <img
+            src={image.src}
+            alt={image.alt}
+            className="object-cover w-full"
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };

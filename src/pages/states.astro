@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
 import { ClientRouter } from "astro:transitions";
+import vaMap from "../images/graphics/VA-map.png";
 
 const states = [
 	{
@@ -45,7 +46,7 @@ const states = [
 			"35 - Salem",
 			"36 - Waynesboro",
 		],
-		img: "/graphics/VA-map.png",
+		img: import("../images/graphics/VA-map.webp"),
 		htmlId: "virginia-select",
 		height: 700,
 		width: 700,
@@ -71,7 +72,7 @@ const states = [
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>Blue Wave America</title>
-	<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="/graphics/favicon.webp" />
 	<ClientRouter />
 </head>
 <Header />

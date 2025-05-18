@@ -1,5 +1,9 @@
 ---
 import Image from "astro/components/Image.astro";
+import facebookIcon from "../images/social-media-icons/facebook-icon.svg"
+import instagramIcon from "../images/social-media-icons/instagram-icon.svg"
+import xIcon from "../images/social-media-icons/x-logo.png"
+import blueskyIcon from "../images/social-media-icons/bluesky-icon.png"
 ---
 
 <script>
@@ -90,30 +94,39 @@ import Image from "astro/components/Image.astro";
 						<div class="flex justify-between gap-4 items-center">
 							<a href="https://www.facebook.com/BlueWaveAmerica" target="_blank">
 								<Image
-									src="/social-media-icons/facebook-icon.svg"
+									src={facebookIcon}
 									alt="Facebook icon"
 									height="32"
 									width="32"
+                  loading="eager"
 								/>
 							</a>
 							<a href="https://www.instagram.com/bluewaveamerica/" target="_blank">
 								<Image
-									src="/social-media-icons/instagram-icon.svg"
+									src={instagramIcon}
 									alt="Instagram icon"
 									height="31"
 									width="31"
+                  loading="eager"
 								/>
 							</a>
 							<a href="https://bsky.app/profile/bluewaveamerica.bsky.social" target="_blank">
 								<Image
-									src="/social-media-icons/bluesky-icon.png"
+									src={blueskyIcon}
 									alt="Bluesky icon"
 									height="31"
 									width="31"
+                  loading="eager"
 								/>
 							</a>
 							<a href="https://x.com/BlueWaveAm" target="_blank">
-								<Image src="/social-media-icons/x-logo.png" alt="X icon" height="36" width="36" />
+								<Image
+                  src={xIcon}
+                  alt="X icon"
+                  height="36"
+                  width="36"
+                  loading="eager"
+                />
 							</a>
 						</div>
 						<a

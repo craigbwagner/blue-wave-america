@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { ClientRouter } from "astro:transitions";
+import { Image } from "astro:assets";
 
 const team = [
 	{
@@ -9,7 +10,7 @@ const team = [
 		title: "Former Congressman, founder of Blue Wave America",
 		description:
 			"“When I represented Louisville, KY in Congress, I saw firsthand how Republicans under Newt Gingrich began working to dismantle democracy and how they have made the lives of rural Americans so much harder. That's why I started Blue Wave America—I know there are still Democrats we can turn out in deep red counties. We did it in 2022 and 2024, and we are doing it full-steam for 2025 and 2026.”",
-		src: "/people/mike-ward.jpg",
+		src: import("../images/people/mike-ward.webp"),
 		imgAlt: "Mike Ward",
 	},
 ];
@@ -19,7 +20,7 @@ const team = [
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width" />
 	<title>Blue Wave America</title>
-	<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
+	<link rel="icon" type="image/x-icon" href="/graphics/favicon.webp" />
 	<ClientRouter />
 </head>
 <body>
@@ -48,10 +49,11 @@ const team = [
 					team.map((teamMember) => (
 						<div class="space-y-12 sm:grid sm:grid-cols-1 sm:gap-12 sm:space-y-0 lg:gap-x-8">
 							<div class="flex items-center space-x-4 lg:space-x-6">
-								<img
+								<Image
+									src={teamMember.src}
 									alt={teamMember.imgAlt}
 									class="h-auto rounded-md w-44"
-									src={teamMember.src}
+                  loading="eager"
 								/>
 								<div class="space-y-1 text-lg font-medium leading-6">
 									<h3 class="text-xl">{teamMember.name}</h3>
