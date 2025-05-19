@@ -8,9 +8,9 @@ import "swiper/css/effect-coverflow";
 
 
 const carouselImages = [
-  { src: "/src/images/graphics/carousel1.webp", alt: ""},
-  { src: "/src/images/graphics/carousel2.webp", alt: ""},
-  { src: "/src/images/graphics/carousel3.webp", alt: ""}
+  { src: "/carousel1.webp", alt: ""},
+  { src: "/carousel2.webp", alt: ""},
+  { src: "/carousel3.webp", alt: ""}
 ];
 
 export default function Carousel() {
