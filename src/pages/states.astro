@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
 import { ClientRouter } from "astro:transitions";
+import SiteLayout from "../layouts/SiteLayout.astro";
 
 const states = [
 	{
@@ -67,63 +68,56 @@ const states = [
 ];
 ---
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Blue Wave America</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.webp" />
-	<ClientRouter />
-</head>
-<Header />
-<main class="flexml-5 my-10">
-	<h1
-		class="text-4xl text-center mb-6 font-extrabold tracking-tight text-sky-600 md:text-5xl"
-	>
-		States We're In
-	</h1>
-	<section class="flex flex-col gap-8">
-		{
-			states.map((state) => (
-				<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
-					<h2 class="text-4xl font-extrabold text-gray-800">
-						{state.name}
-					</h2>
-					<div>
-						<h3 class="my-8 text-3xl text-left mx-auto font-extrabold text-gray-800">
-							{state.name} Job Openings:{" "}
-						</h3>
-						<ul class="grid grid-cols-3 mt-3 gap-4">
-							{state.jobOpenings.map((job) => (
-								<a
-									class="flex items-center justify-center max-w-54 px-2 py-3 text-lg text-white rounded-md bg-sky-600 hover:bg-sky-500"
-									href={job.link}
-									target="_blank"
-								>
-									{job.title}
-								</a>
-							))}
-						</ul>
+<SiteLayout title="States">
+	<main class="my-10">
+		<h1
+			class="text-4xl text-center mb-6 font-extrabold tracking-tight text-sky-600 md:text-5xl"
+		>
+			States We're In
+		</h1>
+		<section class="flex flex-col gap-8">
+			{
+				states.map((state) => (
+					<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
+						<h2 class="text-4xl font-extrabold text-gray-800">
+							{state.name}
+						</h2>
+						<div>
+							<h3 class="my-8 text-3xl text-left mx-auto font-extrabold text-gray-800">
+								{state.name} Job Openings:{" "}
+							</h3>
+							<ul class="grid grid-cols-3 mt-3 gap-4">
+								{state.jobOpenings.map((job) => (
+									<a
+										class="flex items-center justify-center max-w-54 px-2 py-3 text-lg text-white rounded-md bg-sky-600 hover:bg-sky-500"
+										href={job.link}
+										target="_blank"
+									>
+										{job.title}
+									</a>
+								))}
+							</ul>
+						</div>
+						<div>
+							<h3 class="my-6 text-2xl font-extrabold text-gray-800">
+								Counties
+							</h3>
+							<ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+								{state.counties.map((county) => (
+									<li>{county}</li>
+								))}
+							</ul>
+						</div>
+						<Image
+							src={state.img}
+							alt="State Map"
+							height={state.height}
+							width={state.width}
+							class="my-6 self-center"
+						/>
 					</div>
-					<div>
-						<h3 class="my-6 text-2xl font-extrabold text-gray-800">
-							Counties
-						</h3>
-						<ul class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
-							{state.counties.map((county) => (
-								<li>{county}</li>
-							))}
-						</ul>
-					</div>
-					<Image
-						src={state.img}
-						alt="State Map"
-						height={state.height}
-						width={state.width}
-						class="my-6 self-center"
-					/>
-				</div>
-			))
-		}
-	</section>
-</main>
-<Footer />
+				))
+			}
+		</section>
+	</main>
+</SiteLayout>

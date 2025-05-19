@@ -4,6 +4,7 @@ import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
 import Profile from "../components/Profile.astro";
 import { ClientRouter } from "astro:transitions";
+import SiteLayout from "../layouts/SiteLayout.astro";
 
 const pastStates = [
 	{
@@ -212,115 +213,111 @@ const ourWorkPoliticians = [
 		name: "Raphael Warnock (D)",
 		position: "Georgia Senate",
 		img: import("../images/people/raphael-warnock.webp"),
-    loading: "eager"
+		loading: "eager",
 	},
 	{
 		name: "John Fetterman (D)",
 		position: "Pennsylvania Senate (red to blue)",
 		img: import("../images/people/john-fetterman.webp"),
-    loading: "eager"
+		loading: "eager",
 	},
 	{
 		name: "Josh Shapiro (D)",
 		position: "Pennsylvania Governor",
 		img: import("../images/people/josh-shapiro.webp"),
-    loading: "eager"
+		loading: "eager",
 	},
 	{
 		name: "Tammy Baldwin (D)",
 		position: "Wisconsin Senate",
 		img: import("../images/people/tammy-baldwin.webp"),
-    loading: "eager"
+		loading: "eager",
 	},
 	{
 		name: "Josh Stein (D)",
 		position: "North Carolina Governor",
 		img: import("../images/people/josh-stein.webp"),
-    loading: "eager"
+		loading: "eager",
 	},
 	{
 		name: "Elissa Slotkin (D)",
 		position: "Michigan Senate",
 		img: import("../images/people/elissa-slotkin.webp"),
-    loading: "eager"
+		loading: "eager",
 	},
 	{
 		name: "Jon Ossoff (D)",
 		position: "Georgia Senate",
 		img: import("../images/people/jon-ossoff.webp"),
-    loading: "eager"
+		loading: "eager",
 	},
 ];
 ---
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Blue Wave America</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.webp" />
-	<ClientRouter />
-</head>
-<Header />
-<main class="ml-5 my-10">
-	<section>
-		<h1
-			class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl"
-		>
-			Our Work
-		</h1>
-	</section>
-	<section class="flex flex-col gap-8">
-		<div class="grid gap-8 grid-cols-3 py-8 px-6 mx-auto max-w-5xl">
-			<div class="space-y-6">
-				<p class="text-lg text-gray-500">
-					We fought hard in 2022 and 2024 and we'll keep fighting for
-					Democracy <strong>Every Day</strong>.
-				</p>
-			</div>
-			<div class="col-span-2 mt-6">
-				<ul class="grid grid-cols-1 gap-8 md:grid-cols-2" role="list">
-					{
-						ourWorkPoliticians.map((politician) => (
-							<Profile politician={politician} />
-						))
-					}
-				</ul>
-			</div>
-		</div>
-	</section>
-	<section class="flex flex-col mt-4 gap-8">
-		<h2 class="text-4xl mx-auto font-extrabold text-sky-600">
-			States We've Worked In
-		</h2>
-		<section class="flex flex-col gap-8">
-			{
-				pastStates.map((state) => (
-					<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
-						<h2 class="text-3xl font-extrabold text-gray-800">
-							{state.name}
-						</h2>
-						<div>
-							<h3 class="my-6 text-2xl font-extrabold text-gray-800">
-								Counties
-							</h3>
-							<ul class="grid grid-cols-3 pt-2 mt-2 md:grid-cols-4 lg:grid-cols-5">
-								{state.counties.map((county) => (
-									<li>{county}</li>
-								))}
-							</ul>
-						</div>
-						<Image
-							src={state.img}
-							alt="State Map"
-							height={state.height}
-							width={state.width}
-							class="my-8 self-center"
-              loading="lazy"
-						/>
-					</div>
-				))
-			}
+<SiteLayout title="Our Work">
+	<main class="ml-5 my-10">
+		<section>
+			<h1
+				class="text-5xl text-center mb-6 font-extrabold tracking-tight text-sky-600 m:text-3xl"
+			>
+				Our Work
+			</h1>
 		</section>
-	</section>
-</main>
-<Footer />
+		<section class="flex flex-col gap-8">
+			<div class="grid gap-8 grid-cols-3 py-8 px-6 mx-auto max-w-5xl">
+				<div class="space-y-6">
+					<p class="text-lg text-gray-500">
+						We fought hard in 2022 and 2024 and we'll keep fighting
+						for Democracy <strong>Every Day</strong>.
+					</p>
+				</div>
+				<div class="col-span-2 mt-6">
+					<ul
+						class="grid grid-cols-1 gap-8 md:grid-cols-2"
+						role="list"
+					>
+						{
+							ourWorkPoliticians.map((politician) => (
+								<Profile politician={politician} />
+							))
+						}
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section class="flex flex-col mt-4 gap-8">
+			<h2 class="text-4xl mx-auto font-extrabold text-sky-600">
+				States We've Worked In
+			</h2>
+			<section class="flex flex-col gap-8">
+				{
+					pastStates.map((state) => (
+						<div class="flex flex-col px-6 mx-auto max-w-5xl text-center">
+							<h2 class="text-3xl font-extrabold text-gray-800">
+								{state.name}
+							</h2>
+							<div>
+								<h3 class="my-6 text-2xl font-extrabold text-gray-800">
+									Counties
+								</h3>
+								<ul class="grid grid-cols-3 pt-2 mt-2 md:grid-cols-4 lg:grid-cols-5">
+									{state.counties.map((county) => (
+										<li>{county}</li>
+									))}
+								</ul>
+							</div>
+							<Image
+								src={state.img}
+								alt="State Map"
+								height={state.height}
+								width={state.width}
+								class="my-8 self-center"
+								loading="lazy"
+							/>
+						</div>
+					))
+				}
+			</section>
+		</section>
+	</main>
+</SiteLayout>
