@@ -1,8 +1,8 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
-import { ClientRouter } from "astro:transitions";
 
 const volunteerLinks = [
 	{
@@ -24,14 +24,8 @@ const volunteerLinks = [
 ];
 ---
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Blue Wave America</title>
-	<link rel="icon" type="image/x-icon" href="/graphics/favicon.png" />
-	<ClientRouter />
-</head>
-<Header />
+<BaseLayout>
+	<Header />
 <main>
 	<section class="mx-auto max-w-4xl px-6 my-8">
 		<h1
@@ -82,4 +76,5 @@ const volunteerLinks = [
 		/>
 	</section>
 </main>
-<Footer />
+	<Footer />
+</BaseLayout>

@@ -1,7 +1,7 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { ClientRouter } from "astro:transitions";
 import { Image } from "astro:assets";
 
 const team = [
@@ -16,14 +16,7 @@ const team = [
 ];
 ---
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Blue Wave America</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.webp" />
-	<ClientRouter />
-</head>
-<body>
+<BaseLayout>
 	<Header />
 	<main class="mx-auto max-w-4xl">
 		<section class="space-y-5 sm:space-y-4">
@@ -71,5 +64,5 @@ const team = [
 			</div>
 		</section>
 	</main>
-</body>
-<Footer />
+	<Footer />
+</BaseLayout>

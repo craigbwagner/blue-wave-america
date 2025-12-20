@@ -1,8 +1,8 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Image from "astro/components/Image.astro";
-import { ClientRouter } from "astro:transitions";
 
 const states = [
 	{
@@ -67,14 +67,8 @@ const states = [
 ];
 ---
 
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width" />
-	<title>Blue Wave America</title>
-	<link rel="icon" type="image/x-icon" href="/favicon.webp" />
-	<ClientRouter />
-</head>
-<Header />
+<BaseLayout>
+	<Header />
 <main class="flexml-5 my-10">
 	<h1
 		class="text-4xl text-center mb-6 font-extrabold tracking-tight text-sky-600 md:text-5xl"
@@ -126,4 +120,5 @@ const states = [
 		}
 	</section>
 </main>
-<Footer />
+	<Footer />
+</BaseLayout>

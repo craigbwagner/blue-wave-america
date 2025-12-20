@@ -1,0 +1,27 @@
+---
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+	title?: string;
+}
+
+const { title = "Blue Wave America" } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="facebook-domain-verification" content="6rydbvs9o05yrt5jz2uytr686t5q0t" />
+		<title>{title}</title>
+		<link rel="icon" type="image/x-icon" href="/favicon.webp" />
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+		></script>
+		<ClientRouter />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
