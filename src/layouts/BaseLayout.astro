@@ -11,14 +11,64 @@ const { title = "Blue Wave America" } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="facebook-domain-verification" content="6rydbvs9o05yrt5jz2uytr686t5q0t" />
+		<meta
+			name="viewport"
+			content="width=device-width" />
+		<meta
+			name="facebook-domain-verification"
+			content="6rydbvs9o05yrt5jz2uytr686t5q0t" />
 		<title>{title}</title>
-		<link rel="icon" type="image/x-icon" href="/favicon.webp" />
+		<link
+			rel="icon"
+			type="image/x-icon"
+			href="/favicon.webp" />
 		<script
 			defer
-			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-		></script>
+			src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<!-- Meta Pixel Code -->
+
+		<script is:inline>
+			!(function (f, b, e, v, n, t, s) {
+				if (f.fbq) return;
+				n = f.fbq = function () {
+					n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+				};
+
+				if (!f._fbq) f._fbq = n;
+				n.push = n;
+				n.loaded = !0;
+				n.version = "2.0";
+
+				n.queue = [];
+				t = b.createElement(e);
+				t.async = !0;
+
+				t.src = v;
+				s = b.getElementsByTagName(e)[0];
+
+				s.parentNode.insertBefore(t, s);
+			})(
+				window,
+				document,
+				"script",
+
+				"https://connect.facebook.net/en_US/fbevents.js",
+			);
+
+			fbq("init", "1226869322620913");
+
+			fbq("track", "PageView");
+		</script>
+
+		<noscript
+			><img
+				height="1"
+				width="1"
+				style="display: none"
+				src="https://www.facebook.com/tr?id=1226869322620913&ev=PageView&noscript=1"
+		/></noscript>
+
+		<!-- End Meta Pixel Code -->
 		<ClientRouter />
 	</head>
 	<body>
